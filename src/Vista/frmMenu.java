@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import static Vista.frmLogin.initFrmLogin;
+
 /**
  *
  * @author Aleim
@@ -45,6 +47,7 @@ public class frmMenu extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio");
         setMaximumSize(new java.awt.Dimension(1366, 768));
         setMinimumSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
@@ -52,8 +55,6 @@ public class frmMenu extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(1366, 768));
         jPanel1.setMinimumSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        pnlMainContainer.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnlMainContainerLayout = new javax.swing.GroupLayout(pnlMainContainer);
         pnlMainContainer.setLayout(pnlMainContainerLayout);
@@ -70,10 +71,20 @@ public class frmMenu extends javax.swing.JFrame {
 
         btnMenuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/home_icon.png"))); // NOI18N
         btnMenuInicio.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/home_icon_selected.png"))); // NOI18N
+        btnMenuInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuInicioMouseClicked(evt);
+            }
+        });
         jPanel1.add(btnMenuInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 40, -1, 70));
 
         btnAgregarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Add_icon.png"))); // NOI18N
         btnAgregarCliente.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Add_icon_selected.png"))); // NOI18N
+        btnAgregarCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAgregarClienteMouseClicked(evt);
+            }
+        });
         jPanel1.add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 160, -1, 70));
 
         btnMesasOcupadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Table_icon.png"))); // NOI18N
@@ -111,8 +122,22 @@ public class frmMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogOutMouseClicked
-        System.exit(0);
+        initFrmLogin();
+        this.dispose();
     }//GEN-LAST:event_btnLogOutMouseClicked
+
+    private void btnAgregarClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarClienteMouseClicked
+        pnlRegistrarClientes clientes = new pnlRegistrarClientes();       
+        pnlMainContainer.removeAll();
+        pnlMainContainer.add(clientes);
+        pnlMainContainer.repaint();
+        pnlMainContainer.revalidate();
+        pnlMainContainer.setVisible(true);
+    }//GEN-LAST:event_btnAgregarClienteMouseClicked
+
+    private void btnMenuInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuInicioMouseClicked
+        pnlMainContainer.setVisible(false);
+    }//GEN-LAST:event_btnMenuInicioMouseClicked
 
     /**
      * @param args the command line arguments

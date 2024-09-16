@@ -5,6 +5,7 @@
 package Vista;
 
 import static Vista.frmMenu.initFrmMenu;
+import static Vista.frmRecuperarContrasena.initFrmRecuperarContrasena;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
@@ -23,6 +24,7 @@ public class frmLogin extends javax.swing.JFrame {
             txtUsuario.setFont(poppinsFont);
             txtContrasena.setFont(poppinsFont);
             btnLogin.setFont(poppinsFont);
+            btnRecuperarCon.setFont(poppinsFont);
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
         }
@@ -46,9 +48,11 @@ public class frmLogin extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         txtContrasena = new javax.swing.JPasswordField();
         txtUsuario = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        btnRecuperarCon = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio de Sesión");
         setMinimumSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
 
@@ -77,8 +81,19 @@ public class frmLogin extends javax.swing.JFrame {
         txtUsuario.setBorder(null);
         jPanel1.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 317, 290, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_img.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
+        btnRecuperarCon.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnRecuperarCon.setForeground(new java.awt.Color(102, 102, 102));
+        btnRecuperarCon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnRecuperarCon.setText("Olvidé mi contraseña");
+        btnRecuperarCon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRecuperarConMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnRecuperarCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 170, 30));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_img.png"))); // NOI18N
+        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +114,11 @@ public class frmLogin extends javax.swing.JFrame {
       initFrmMenu();
       this.dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRecuperarConMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRecuperarConMouseClicked
+        initFrmRecuperarContrasena();
+        this.dispose();
+    }//GEN-LAST:event_btnRecuperarConMouseClicked
 
     /**
      * @param args the command line arguments
@@ -139,7 +159,8 @@ public class frmLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnLogin;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel btnRecuperarCon;
+    private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtContrasena;
     private javax.swing.JTextField txtUsuario;
