@@ -82,7 +82,6 @@ public class ctrlMenu implements MouseListener{
             pnlClientesRegistrados pnlClRegistrados = new pnlClientesRegistrados();
             ctrlClientesRegistrados ctrl = new ctrlClientesRegistrados(Modelo,pnlClRegistrados);
             
-            
             VISTA.pnlMainContainer.removeAll();
             VISTA.pnlMainContainer.add(pnlClRegistrados);
             VISTA.pnlMainContainer.revalidate();

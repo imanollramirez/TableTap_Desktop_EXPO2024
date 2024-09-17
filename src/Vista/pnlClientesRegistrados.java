@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.table.DefaultTableModel;
 
 public class pnlClientesRegistrados extends javax.swing.JPanel {
 
@@ -26,6 +27,7 @@ public class pnlClientesRegistrados extends javax.swing.JPanel {
             btnActualizar.setFont(poppinsFont);
             btnEliminar.setFont(poppinsFont);
             btnLimpiar.setFont(poppinsFont);
+            jtbClientesRegistrados.setFont(poppinsFont);
             
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
@@ -98,6 +100,7 @@ public class pnlClientesRegistrados extends javax.swing.JPanel {
 
         jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));
 
+        jtbClientesRegistrados.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jtbClientesRegistrados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

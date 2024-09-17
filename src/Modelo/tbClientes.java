@@ -74,7 +74,10 @@ public class tbClientes {
                     rs.getString("ApellidoCliente"), 
                     rs.getString("CorreoCliente"),
                     rs.getString("DUIcliente")});
-            }
+            }                        
+            
+            tabla.getColumnModel().removeColumn(tabla.getColumnModel().getColumn(0));
+            
             //Asignamos el nuevo modelo lleno a la tabla
             tabla.setModel(modeloDeDatos);
         } catch (Exception e) {
@@ -82,7 +85,7 @@ public class tbClientes {
         }
     }
     
-    public void cargarDatosTabla(pnlClientesRegistrados View) {
+    public void CargarDatosCl(pnlClientesRegistrados View) {
         // Obtén la fila seleccionada 
         int filaSeleccionada = View.jtbClientesRegistrados.getSelectedRow();
 
@@ -93,13 +96,12 @@ public class tbClientes {
             String apellidos = View.jtbClientesRegistrados.getValueAt(filaSeleccionada, 2).toString();
             String correo = View.jtbClientesRegistrados.getValueAt(filaSeleccionada, 3).toString();
             String DUI = View.jtbClientesRegistrados.getValueAt(filaSeleccionada, 4).toString();
-
+            
             // Establece los valores en los campos de texto
-            View.txtNombreCliente.setText(idCliente);
-            View.txtApellidosCliente.setText(nombre);
-            View.txtCorreoCliente.setText(apellidos);
-            View.txtDUIcliente.setText(correo);
-            View.txtDUIcliente.setText(DUI);   
+            View.txtNombreCliente.setText(nombre);
+            View.txtApellidosCliente.setText(apellidos);
+            View.txtCorreoCliente.setText(correo);
+            View.txtDUIcliente.setText(DUI);
         }
     }
     
