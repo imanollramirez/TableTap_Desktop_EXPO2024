@@ -2,95 +2,103 @@ package Controlador;
 
 import Vista.frmMenu;
 import Vista.pnlRegistrarClientes;
+import Controlador.ctrlClientesRegistrados;
 import Vista.pnlPerfil;
+import Modelo.tbClientes;
 import Vista.pnlClientesRegistrados;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class ctrlMenu implements MouseListener{
 
-    frmMenu VIEW;
-    public ctrlMenu (frmMenu view)
+    private frmMenu VISTA;
+    public ctrlMenu (frmMenu vista)
     {
-        this.VIEW = view;
-        view.btnMenuInicio.addMouseListener(this);
-        view.btnAgregarCliente.addMouseListener(this);
-        view.btnMesasOcupadas.addMouseListener(this);
-        view.btnPerfil.addMouseListener(this);
-        view.btnLogOut.addMouseListener(this);
+        this.VISTA = vista;
+      
+        vista.btnMenuInicio.addMouseListener(this);
+        vista.btnAgregarCliente.addMouseListener(this);
+        vista.btnMesasOcupadas.addMouseListener(this);
+        vista.btnPerfil.addMouseListener(this);
+        vista.btnLogOut.addMouseListener(this);    
     }
     
-    
+    //Función para cambiar el color de los botones, según el que se seleccione.
     public void BotonSeleccionado(MouseEvent btn)
     {
-        if(btn.getSource() == VIEW.btnMenuInicio)
+        if(btn.getSource() == VISTA.btnMenuInicio)
         {
-        VIEW.btnMenuInicio.setEnabled(false);
-        VIEW.btnAgregarCliente.setEnabled(true);
-        VIEW.btnMesasOcupadas.setEnabled(true);
-        VIEW.btnPerfil.setEnabled(true);   
+        VISTA.btnMenuInicio.setEnabled(false);
+        VISTA.btnAgregarCliente.setEnabled(true);
+        VISTA.btnMesasOcupadas.setEnabled(true);
+        VISTA.btnPerfil.setEnabled(true);   
         }
-        if(btn.getSource() == VIEW.btnAgregarCliente)
+        if(btn.getSource() == VISTA.btnAgregarCliente)
         {
-        VIEW.btnMenuInicio.setEnabled(true);
-        VIEW.btnAgregarCliente.setEnabled(false);
-        VIEW.btnMesasOcupadas.setEnabled(true);
-        VIEW.btnPerfil.setEnabled(true);   
+        VISTA.btnMenuInicio.setEnabled(true);
+        VISTA.btnAgregarCliente.setEnabled(false);
+        VISTA.btnMesasOcupadas.setEnabled(true);
+        VISTA.btnPerfil.setEnabled(true);   
         }
-        if(btn.getSource() == VIEW.btnMesasOcupadas)
+        if(btn.getSource() == VISTA.btnMesasOcupadas)
         {
-        VIEW.btnMenuInicio.setEnabled(true);
-        VIEW.btnAgregarCliente.setEnabled(true);
-        VIEW.btnMesasOcupadas.setEnabled(false);
-        VIEW.btnPerfil.setEnabled(true);   
+        VISTA.btnMenuInicio.setEnabled(true);
+        VISTA.btnAgregarCliente.setEnabled(true);
+        VISTA.btnMesasOcupadas.setEnabled(false);
+        VISTA.btnPerfil.setEnabled(true);   
         }
-        if(btn.getSource() == VIEW.btnPerfil)
+        if(btn.getSource() == VISTA.btnPerfil)
         {
-        VIEW.btnMenuInicio.setEnabled(true);
-        VIEW.btnAgregarCliente.setEnabled(true);
-        VIEW.btnMesasOcupadas.setEnabled(true);
-        VIEW.btnPerfil.setEnabled(false);   
+        VISTA.btnMenuInicio.setEnabled(true);
+        VISTA.btnAgregarCliente.setEnabled(true);
+        VISTA.btnMesasOcupadas.setEnabled(true);
+        VISTA.btnPerfil.setEnabled(false);   
         }
     }
     
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getSource() == VIEW.btnMenuInicio)
+        if(e.getSource() == VISTA.btnMenuInicio)
         {
             BotonSeleccionado(e);
-            VIEW.btnMenuInicio.enable(false);
-            VIEW.pnlMainContainer.setVisible(false);
+            VISTA.btnMenuInicio.enable(false);
+            VISTA.pnlMainContainer.setVisible(false);
         }
-        if(e.getSource() == VIEW.btnAgregarCliente)
+        if(e.getSource() == VISTA.btnAgregarCliente)
         {
             BotonSeleccionado(e);
             pnlRegistrarClientes cl = new pnlRegistrarClientes();
-            VIEW.pnlMainContainer.removeAll();
-            VIEW.pnlMainContainer.add(cl);
-            VIEW.pnlMainContainer.revalidate();
-            VIEW.pnlMainContainer.repaint();
-            VIEW.pnlMainContainer.setVisible(true);
+            VISTA.pnlMainContainer.removeAll();
+            VISTA.pnlMainContainer.add(cl);
+            VISTA.pnlMainContainer.revalidate();
+            VISTA.pnlMainContainer.repaint();
+            VISTA.pnlMainContainer.setVisible(true);
         }
-        if(e.getSource() == VIEW.btnMesasOcupadas)
+        if(e.getSource() == VISTA.btnMesasOcupadas)
         {
             BotonSeleccionado(e);
-            pnlClientesRegistrados clRegis = new pnlClientesRegistrados();
-            VIEW.pnlMainContainer.removeAll();
-            VIEW.pnlMainContainer.add(clRegis);
-            VIEW.pnlMainContainer.revalidate();
-            VIEW.pnlMainContainer.repaint();
-            VIEW.pnlMainContainer.setVisible(true);
+            
+            tbClientes Modelo = new tbClientes();
+            pnlClientesRegistrados pnlClRegistrados = new pnlClientesRegistrados();
+            ctrlClientesRegistrados ctrl = new ctrlClientesRegistrados(Modelo,pnlClRegistrados);
+            
+            
+            VISTA.pnlMainContainer.removeAll();
+            VISTA.pnlMainContainer.add(pnlClRegistrados);
+            VISTA.pnlMainContainer.revalidate();
+            VISTA.pnlMainContainer.repaint();
+            VISTA.pnlMainContainer.setVisible(true);
             
         }
-        if(e.getSource() == VIEW.btnPerfil)
+        if(e.getSource() == VISTA.btnPerfil)
         {
             BotonSeleccionado(e);
             pnlPerfil perfil = new pnlPerfil();
-            VIEW.pnlMainContainer.removeAll();
-            VIEW.pnlMainContainer.add(perfil);
-            VIEW.pnlMainContainer.revalidate();
-            VIEW.pnlMainContainer.repaint();
-            VIEW.pnlMainContainer.setVisible(true);
+            VISTA.pnlMainContainer.removeAll();
+            VISTA.pnlMainContainer.add(perfil);
+            VISTA.pnlMainContainer.revalidate();
+            VISTA.pnlMainContainer.repaint();
+            VISTA.pnlMainContainer.setVisible(true);
         }
     }
 

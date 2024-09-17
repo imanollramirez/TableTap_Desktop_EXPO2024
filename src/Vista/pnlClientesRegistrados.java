@@ -131,12 +131,12 @@ public class pnlClientesRegistrados extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizar;
-    private javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jtbClientesRegistrados;
+    public javax.swing.JTable jtbClientesRegistrados;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lbl2;
     private javax.swing.JLabel lbl3;
