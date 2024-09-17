@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Vista;
 
 import java.awt.Font;
@@ -9,10 +5,6 @@ import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
 
-/**
- *
- * @author Aleim
- */
 public class pnlPerfil extends javax.swing.JPanel {
 
     /**
@@ -59,17 +51,17 @@ public class pnlPerfil extends javax.swing.JPanel {
         txtTelefonoPerfil.setForeground(new java.awt.Color(0, 0, 0));
         txtTelefonoPerfil.setToolTipText("Ingrese su nombre de usuario");
         txtTelefonoPerfil.setBorder(null);
-        jPanel1.add(txtTelefonoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 290, 40));
+        jPanel1.add(txtTelefonoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 491, 290, 40));
 
         txtCorreoPerfil.setForeground(new java.awt.Color(0, 0, 0));
         txtCorreoPerfil.setToolTipText("Ingrese su nombre de usuario");
         txtCorreoPerfil.setBorder(null);
-        jPanel1.add(txtCorreoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 253, 290, 40));
+        jPanel1.add(txtCorreoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 285, 290, 40));
 
         txtDUIperfil.setForeground(new java.awt.Color(0, 0, 0));
         txtDUIperfil.setToolTipText("Ingrese su nombre de usuario");
         txtDUIperfil.setBorder(null);
-        jPanel1.add(txtDUIperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 367, 290, 40));
+        jPanel1.add(txtDUIperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 388, 290, 40));
 
         btnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnCerrarSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -80,19 +72,19 @@ public class pnlPerfil extends javax.swing.JPanel {
         lblNombreEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         lblNombreEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNombreEmpleado.setText("Nombre del empleado");
-        jPanel1.add(lblNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 540, 410, 50));
+        jPanel1.add(lblNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, 410, 50));
 
         lblApellidosEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblApellidosEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         lblApellidosEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblApellidosEmpleado.setText("Apellidos del empleado");
-        jPanel1.add(lblApellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 590, 410, 50));
+        jPanel1.add(lblApellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 410, 50));
 
         lblCargoEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblCargoEmpleado.setForeground(new java.awt.Color(255, 0, 0));
         lblCargoEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCargoEmpleado.setText("Cargo del empleado");
-        jPanel1.add(lblCargoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 690, 410, 50));
+        jPanel1.add(lblCargoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 690, 410, 50));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Perfil_img.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

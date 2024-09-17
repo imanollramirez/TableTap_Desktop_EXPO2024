@@ -1,15 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
+import Controlador.ctrlMenu;
 import static Vista.frmLogin.initFrmLogin;
 
-/**
- *
- * @author Aleim
- */
 public class frmMenu extends javax.swing.JFrame {
 
     /**
@@ -24,10 +17,9 @@ public class frmMenu extends javax.swing.JFrame {
     public static void initFrmMenu()
     {
      frmMenu menu = new frmMenu();
+     ctrlMenu ctrl = new ctrlMenu(menu);
      menu.setVisible(true);
     }
-    
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,17 +48,10 @@ public class frmMenu extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout pnlMainContainerLayout = new javax.swing.GroupLayout(pnlMainContainer);
-        pnlMainContainer.setLayout(pnlMainContainerLayout);
-        pnlMainContainerLayout.setHorizontalGroup(
-            pnlMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1250, Short.MAX_VALUE)
-        );
-        pnlMainContainerLayout.setVerticalGroup(
-            pnlMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
-        );
-
+        pnlMainContainer.setBackground(new java.awt.Color(255, 255, 255));
+        pnlMainContainer.setMaximumSize(new java.awt.Dimension(1250, 770));
+        pnlMainContainer.setMinimumSize(new java.awt.Dimension(1250, 770));
+        pnlMainContainer.setLayout(new java.awt.BorderLayout());
         jPanel1.add(pnlMainContainer, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 1250, 770));
 
         btnMenuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/home_icon.png"))); // NOI18N
@@ -80,11 +65,6 @@ public class frmMenu extends javax.swing.JFrame {
 
         btnAgregarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Add_icon.png"))); // NOI18N
         btnAgregarCliente.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Add_icon_selected.png"))); // NOI18N
-        btnAgregarCliente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAgregarClienteMouseClicked(evt);
-            }
-        });
         jPanel1.add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 160, -1, 70));
 
         btnMesasOcupadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Table_icon.png"))); // NOI18N
@@ -126,15 +106,6 @@ public class frmMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnLogOutMouseClicked
 
-    private void btnAgregarClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarClienteMouseClicked
-        pnlRegistrarClientes clientes = new pnlRegistrarClientes();       
-        pnlMainContainer.removeAll();
-        pnlMainContainer.add(clientes);
-        pnlMainContainer.repaint();
-        pnlMainContainer.revalidate();
-        pnlMainContainer.setVisible(true);
-    }//GEN-LAST:event_btnAgregarClienteMouseClicked
-
     private void btnMenuInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuInicioMouseClicked
         pnlMainContainer.setVisible(false);
     }//GEN-LAST:event_btnMenuInicioMouseClicked
@@ -169,19 +140,19 @@ public class frmMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenu().setVisible(true);
+                initFrmMenu();
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel btnAgregarCliente;
-    private javax.swing.JLabel btnLogOut;
-    private javax.swing.JLabel btnMenuInicio;
-    private javax.swing.JLabel btnMesasOcupadas;
-    private javax.swing.JLabel btnPerfil;
+    public javax.swing.JLabel btnAgregarCliente;
+    public javax.swing.JLabel btnLogOut;
+    public javax.swing.JLabel btnMenuInicio;
+    public javax.swing.JLabel btnMesasOcupadas;
+    public javax.swing.JLabel btnPerfil;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel pnlMainContainer;
+    public javax.swing.JPanel pnlMainContainer;
     // End of variables declaration//GEN-END:variables
 }

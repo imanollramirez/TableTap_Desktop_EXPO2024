@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Vista;
 
 import java.awt.Font;
@@ -9,10 +5,6 @@ import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
 
-/**
- *
- * @author Aleim
- */
 public class pnlClientesRegistrados extends javax.swing.JPanel {
 
     /**

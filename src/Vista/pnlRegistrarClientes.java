@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Vista;
 
-/**
- *
- * @author Aleim
- */
 public class pnlRegistrarClientes extends javax.swing.JPanel {
 
     /**
@@ -44,25 +36,25 @@ public class pnlRegistrarClientes extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Mesa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, 70, 70));
+        jPanel1.add(Mesa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 70, 70));
 
         Mesa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 70, 70));
+        jPanel1.add(Mesa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 70, 70));
 
         Mesa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, 70, 70));
+        jPanel1.add(Mesa3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 70, 70));
 
         Mesa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 530, 70, 70));
+        jPanel1.add(Mesa4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, 70, 70));
 
         Mesa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 530, 70, 70));
+        jPanel1.add(Mesa5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, 70, 70));
 
         Mesa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 530, 70, 70));
+        jPanel1.add(Mesa6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 540, 70, 70));
 
         Mesa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 600, 70, 70));
+        jPanel1.add(Mesa7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 600, 70, 70));
 
         Mesa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
         jPanel1.add(Mesa8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 70, 70));
@@ -71,7 +63,7 @@ public class pnlRegistrarClientes extends javax.swing.JPanel {
         jPanel1.add(Mesa9, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 70, 70));
 
         Mesa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa10, new org.netbeans.lib.awtextra.AbsoluteConstraints(727, 594, 70, 70));
+        jPanel1.add(Mesa10, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 603, 70, 70));
 
         Mesa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
         jPanel1.add(Mesa11, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 410, 70, 70));

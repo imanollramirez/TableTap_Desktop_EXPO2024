@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
 import static Vista.frmLogin.initFrmLogin;
@@ -9,10 +5,7 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
-/**
- *
- * @author Aleim
- */
+
 public class frmBienvenida extends javax.swing.JFrame {
 
     /**
