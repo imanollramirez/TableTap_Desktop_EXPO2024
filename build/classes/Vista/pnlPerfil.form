@@ -90,7 +90,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="170" y="590" width="380" height="80"/>
+              <AbsoluteConstraints x="160" y="590" width="380" height="80"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -148,7 +148,7 @@
         <Component class="javax.swing.JLabel" name="Fondo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Images/Perfil_img.png"/>
+              <Image iconType="3" name="/Imagenes/Perfil_img.png"/>
             </Property>
           </Properties>
           <Constraints>

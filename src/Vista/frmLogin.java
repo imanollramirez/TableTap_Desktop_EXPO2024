@@ -92,7 +92,7 @@ public class frmLogin extends javax.swing.JFrame {
         });
         jPanel1.add(btnRecuperarCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 170, 30));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_img.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Login_img.png"))); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

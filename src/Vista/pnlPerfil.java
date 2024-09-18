@@ -66,7 +66,7 @@ public class pnlPerfil extends javax.swing.JPanel {
         btnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnCerrarSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnCerrarSesion.setText("Cerrar Sesión");
-        jPanel1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 590, 380, 80));
+        jPanel1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 590, 380, 80));
 
         lblNombreEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblNombreEmpleado.setForeground(new java.awt.Color(0, 0, 0));
@@ -86,7 +86,7 @@ public class pnlPerfil extends javax.swing.JPanel {
         lblCargoEmpleado.setText("Cargo del empleado");
         jPanel1.add(lblCargoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 690, 410, 50));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Perfil_img.png"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Perfil_img.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

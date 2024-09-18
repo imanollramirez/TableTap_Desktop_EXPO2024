@@ -35,43 +35,55 @@ public class pnlRegistrarClientes extends javax.swing.JPanel {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Mesa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 70, 70));
 
-        Mesa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa2.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 70, 70));
 
-        Mesa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa3.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 70, 70));
 
-        Mesa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa4.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, 70, 70));
 
-        Mesa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa5.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, 70, 70));
 
-        Mesa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa6.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 540, 70, 70));
 
-        Mesa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa7.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 600, 70, 70));
 
-        Mesa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa8.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 70, 70));
 
-        Mesa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa9.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa9, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 70, 70));
 
-        Mesa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
+        Mesa10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa10.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
         jPanel1.add(Mesa10, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 603, 70, 70));
 
-        Mesa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa11, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 410, 70, 70));
+        Mesa11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa11.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
+        jPanel1.add(Mesa11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 70, 70));
 
-        Mesa12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ic_disponible.png"))); // NOI18N
-        jPanel1.add(Mesa12, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 410, 70, 70));
+        Mesa12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_disponible.png"))); // NOI18N
+        Mesa12.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ic_ocupado.png"))); // NOI18N
+        jPanel1.add(Mesa12, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 420, 70, 70));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Croquis_img.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Croquis_img.png"))); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -88,18 +100,18 @@ public class pnlRegistrarClientes extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Mesa1;
-    private javax.swing.JLabel Mesa10;
-    private javax.swing.JLabel Mesa11;
-    private javax.swing.JLabel Mesa12;
-    private javax.swing.JLabel Mesa2;
-    private javax.swing.JLabel Mesa3;
-    private javax.swing.JLabel Mesa4;
-    private javax.swing.JLabel Mesa5;
-    private javax.swing.JLabel Mesa6;
-    private javax.swing.JLabel Mesa7;
-    private javax.swing.JLabel Mesa8;
-    private javax.swing.JLabel Mesa9;
+    public javax.swing.JLabel Mesa1;
+    public javax.swing.JLabel Mesa10;
+    public javax.swing.JLabel Mesa11;
+    public javax.swing.JLabel Mesa12;
+    public javax.swing.JLabel Mesa2;
+    public javax.swing.JLabel Mesa3;
+    public javax.swing.JLabel Mesa4;
+    public javax.swing.JLabel Mesa5;
+    public javax.swing.JLabel Mesa6;
+    public javax.swing.JLabel Mesa7;
+    public javax.swing.JLabel Mesa8;
+    public javax.swing.JLabel Mesa9;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

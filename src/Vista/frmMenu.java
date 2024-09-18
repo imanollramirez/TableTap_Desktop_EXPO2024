@@ -54,8 +54,8 @@ public class frmMenu extends javax.swing.JFrame {
         pnlMainContainer.setLayout(new java.awt.BorderLayout());
         jPanel1.add(pnlMainContainer, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 1250, 770));
 
-        btnMenuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/home_icon.png"))); // NOI18N
-        btnMenuInicio.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/home_icon_selected.png"))); // NOI18N
+        btnMenuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home_icon.png"))); // NOI18N
+        btnMenuInicio.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/home_icon_selected.png"))); // NOI18N
         btnMenuInicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnMenuInicioMouseClicked(evt);
@@ -63,19 +63,19 @@ public class frmMenu extends javax.swing.JFrame {
         });
         jPanel1.add(btnMenuInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 40, -1, 70));
 
-        btnAgregarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Add_icon.png"))); // NOI18N
-        btnAgregarCliente.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Add_icon_selected.png"))); // NOI18N
+        btnAgregarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Add_icon.png"))); // NOI18N
+        btnAgregarCliente.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Add_icon_selected.png"))); // NOI18N
         jPanel1.add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 160, -1, 70));
 
-        btnMesasOcupadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Table_icon.png"))); // NOI18N
-        btnMesasOcupadas.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Table_icon_selected.png"))); // NOI18N
+        btnMesasOcupadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Table_icon.png"))); // NOI18N
+        btnMesasOcupadas.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Table_icon_selected.png"))); // NOI18N
         jPanel1.add(btnMesasOcupadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 300, -1, 70));
 
-        btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/User_icon.png"))); // NOI18N
-        btnPerfil.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/User_icon_selected.png"))); // NOI18N
+        btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/User_icon.png"))); // NOI18N
+        btnPerfil.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/User_icon_selected.png"))); // NOI18N
         jPanel1.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 420, -1, 70));
 
-        btnLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LogOut_icon.png"))); // NOI18N
+        btnLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LogOut_icon.png"))); // NOI18N
         btnLogOut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnLogOutMouseClicked(evt);
@@ -83,7 +83,7 @@ public class frmMenu extends javax.swing.JFrame {
         });
         jPanel1.add(btnLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 660, -1, 70));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Menu_img.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Menu_img.png"))); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 768));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -79,6 +79,11 @@ public class ctrlClientesRegistrados implements MouseListener{
             JOptionPane.showMessageDialog(null, "El número de DUI no puede contener más de 8 dígitos.");
             VISTA.txtDUIcliente.setFocusable(true);
         }
+        else if(VISTA.txtDUIcliente.getText().length() < 10)
+        {
+            JOptionPane.showMessageDialog(null, "El número de DUI no puede contener menos de 8 dígitos.");
+            VISTA.txtDUIcliente.setFocusable(true);
+        }
         else
         {            
             CLIENTES.setNombreCliente(VISTA.txtNombreCliente.getText());

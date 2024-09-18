@@ -108,7 +108,7 @@ public class pnlClientesRegistrados extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, 770, 340));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Clientes_img.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Clientes_img.png"))); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

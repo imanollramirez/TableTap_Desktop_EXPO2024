@@ -69,7 +69,7 @@ public class frmRecuperarContrasena extends javax.swing.JFrame {
         btnEnviarCod.setText("Enviar");
         jPanel1.add(btnEnviarCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 499, 220, 70));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RecuperarContra_img.png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/RecuperarContra_img.png"))); // NOI18N
         jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

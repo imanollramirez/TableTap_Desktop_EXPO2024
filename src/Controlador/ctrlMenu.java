@@ -3,6 +3,7 @@ package Controlador;
 import Vista.frmMenu;
 import Vista.pnlRegistrarClientes;
 import Controlador.ctrlClientesRegistrados;
+import Controlador.ctrlReservacionMesas;
 import Vista.pnlPerfil;
 import Modelo.tbClientes;
 import Modelo.tbMesas;
@@ -69,6 +70,10 @@ public class ctrlMenu implements MouseListener{
         {
             BotonSeleccionado(e);
             pnlRegistrarClientes cl = new pnlRegistrarClientes();
+            tbMesas mesas = new tbMesas();
+            ctrlReservacionMesas ctrlReservar = new ctrlReservacionMesas(cl,mesas);
+            mesas.EstadoMesa(cl);
+            
             VISTA.pnlMainContainer.removeAll();
             VISTA.pnlMainContainer.add(cl);
             VISTA.pnlMainContainer.revalidate();
