@@ -1,5 +1,9 @@
 package Modelo;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JTable;
+
 public class tbMesas {
     private int idMesa;
     private String EstadoMesa;
@@ -36,5 +40,24 @@ public class tbMesas {
 
     public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
+    }
+    
+    public void EliminarMesa(JTable tabla) {
+        //Creamos una variable igual a ejecutar el método de la clase de conexión
+        Connection conexion = claseConexion.getCon();
+
+        //obtenemos que fila seleccionó el usuario
+        int filaSeleccionada = tabla.getSelectedRow();
+        //Obtenemos el id de la fila seleccionada
+        String idCliente = tabla.getValueAt(filaSeleccionada, 0).toString();
+        //borramos 
+        try {
+            PreparedStatement eliminarMesa = conexion.prepareStatement("DELETE FROM Mesa WHERE idCliente = ?");
+            eliminarMesa.setString(1, idCliente);
+            eliminarMesa.executeUpdate();
+            
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
     }
 }

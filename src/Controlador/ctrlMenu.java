@@ -5,6 +5,7 @@ import Vista.pnlRegistrarClientes;
 import Controlador.ctrlClientesRegistrados;
 import Vista.pnlPerfil;
 import Modelo.tbClientes;
+import Modelo.tbMesas;
 import Vista.pnlClientesRegistrados;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -78,9 +79,10 @@ public class ctrlMenu implements MouseListener{
         {
             BotonSeleccionado(e);
             
-            tbClientes Modelo = new tbClientes();
+            tbClientes Clientes = new tbClientes();
             pnlClientesRegistrados pnlClRegistrados = new pnlClientesRegistrados();
-            ctrlClientesRegistrados ctrl = new ctrlClientesRegistrados(Modelo,pnlClRegistrados);
+            tbMesas Mesas = new tbMesas();
+            ctrlClientesRegistrados ctrl = new ctrlClientesRegistrados(Mesas,Clientes,pnlClRegistrados);
             
             VISTA.pnlMainContainer.removeAll();
             VISTA.pnlMainContainer.add(pnlClRegistrados);

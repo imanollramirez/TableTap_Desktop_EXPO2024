@@ -85,17 +85,9 @@ public class pnlClientesRegistrados extends javax.swing.JPanel {
 
         btnLimpiar.setText("Limpiar");
         jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 330, 100, -1));
-
-        txtNombreCliente.setText("Nombre");
         jPanel1.add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 230, 40));
-
-        txtApellidosCliente.setText("Apellidos");
         jPanel1.add(txtApellidosCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 230, 40));
-
-        txtCorreoCliente.setText("Correo Electrónico");
         jPanel1.add(txtCorreoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 170, 230, 40));
-
-        txtDUIcliente.setText("DUI");
         jPanel1.add(txtDUIcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 260, 230, 40));
 
         jScrollPane1.setBackground(new java.awt.Color(204, 204, 204));

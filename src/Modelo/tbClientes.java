@@ -74,10 +74,7 @@ public class tbClientes {
                     rs.getString("ApellidoCliente"), 
                     rs.getString("CorreoCliente"),
                     rs.getString("DUIcliente")});
-            }                        
-            
-            tabla.getColumnModel().removeColumn(tabla.getColumnModel().getColumn(0));
-            
+            }                                    
             //Asignamos el nuevo modelo lleno a la tabla
             tabla.setModel(modeloDeDatos);
         } catch (Exception e) {
@@ -119,7 +116,7 @@ public class tbClientes {
             nuevoCliente.setString(5, getDUIcliente());
             //Ejecutar la consulta
             nuevoCliente.executeUpdate();
-            conexion.commit();
+            
         } catch (SQLException ex) {
             System.out.println("Error: " + ex);
         }
@@ -128,7 +125,8 @@ public class tbClientes {
     public void ActualizarCliente(JTable tabla) {
         //obtenemos que fila seleccionó el usuario
         int filaSeleccionada = tabla.getSelectedRow();
-        if (filaSeleccionada != -1) {
+        if (filaSeleccionada != -1) 
+        {
             //Obtenemos el id de la fila seleccionada
             String ID = tabla.getValueAt(filaSeleccionada, 0).toString();
         
@@ -139,19 +137,44 @@ public class tbClientes {
             //Creamos el PreparedStatement que ejecutará la Query
             PreparedStatement actuCliente = conexion.prepareStatement("UPDATE Cliente SET NombreCliente = ?, ApellidoCliente = ?, CorreoCliente = ?, DUIcliente = ? WHERE idCliente = ?");
             //Establecer valores de la consulta SQL
-            actuCliente.setString(1,UUID.randomUUID().toString());
-            actuCliente.setString(2, getNombreCliente());
-            actuCliente.setString(3, getApellidoCliente());
-            actuCliente.setString(4, getCorreoCliente());
+            actuCliente.setString(1,getNombreCliente());
+            actuCliente.setString(2, getApellidoCliente());
+            actuCliente.setString(3, getCorreoCliente());
+            actuCliente.setString(4, getDUIcliente());
             actuCliente.setString(5, ID);
             //Ejecutar la consulta
             actuCliente.executeUpdate();
-            conexion.commit();
-        } catch (SQLException ex) {
+        } 
+        catch (SQLException ex) {
             System.out.println("Error: " + ex);
         }
+        
+        }
     }
-}
+    
+    public boolean ExistePedidoCliente(JTable tabla)
+    {       
+        int filaSeleccionada = tabla.getSelectedRow();
+        String idCliente = tabla.getValueAt(filaSeleccionada, 0).toString();
+        
+        Connection conexion = claseConexion.getCon();  
+        try {
+            PreparedStatement existe = conexion.prepareStatement("SELECT * FROM Pedido P INNER JOIN Mesa M ON P.idMesa = M.idMesa WHERE idCliente = ?");
+            existe.setString(1, idCliente);
+            ResultSet res = existe.executeQuery();
+            
+            if(res.next())
+                return true;
+            else
+                return false;
+        } 
+        catch (SQLException e) 
+        {
+            System.out.println("Error: " + e);
+        } 
+        
+        return false;
+    }
     
     public void EliminarCliente(JTable tabla) {
         //Creamos una variable igual a ejecutar el método de la clase de conexión
@@ -170,6 +193,5 @@ public class tbClientes {
             System.out.println("Error: " + e);
         }
     }
-}
-    
-    
+
+}  

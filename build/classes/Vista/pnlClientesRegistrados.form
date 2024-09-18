@@ -124,9 +124,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombreCliente">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre"/>
-          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
@@ -137,9 +134,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtApellidosCliente">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Apellidos"/>
-          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
@@ -150,9 +144,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCorreoCliente">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Correo Electr&#xf3;nico"/>
-          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
@@ -163,9 +154,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtDUIcliente">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DUI"/>
-          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
