@@ -1,6 +1,7 @@
 package Vista;
 
 import Controlador.ctrlMenu;
+import Modelo.tbEmpleados;
 import static Vista.frmLogin.initFrmLogin;
 
 public class frmMenu extends javax.swing.JFrame {
@@ -14,12 +15,6 @@ public class frmMenu extends javax.swing.JFrame {
         pnlMainContainer.setVisible(false);
     }
 
-    public static void initFrmMenu()
-    {
-     frmMenu menu = new frmMenu();
-     ctrlMenu ctrl = new ctrlMenu(menu);
-     menu.setVisible(true);
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -140,7 +135,8 @@ public class frmMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                initFrmMenu();
+                //No se inicia acá porque cuando lo hago con Init se borran las varibales globales de la info del empleado, porque como se crea una clase de 0.
+                //Por eso el código que inicia este menú está en el controlador de Login, de donde le pase la info del empleado y creo e inicio una instancia u objeto del menu.
             }
         });
     }

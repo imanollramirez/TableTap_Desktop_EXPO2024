@@ -6,8 +6,7 @@ package Vista;
 
 import Controlador.ctrlLogin;
 import Modelo.tbUsuarios;
-import static Vista.frmMenu.initFrmMenu;
-import static Vista.frmRecuperarContrasena.initFrmRecuperarContrasena;
+import Modelo.tbEmpleados;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
@@ -35,7 +34,8 @@ public class frmLogin extends javax.swing.JFrame {
     public static void initFrmLogin(){
         frmLogin login = new frmLogin();
         tbUsuarios info = new tbUsuarios();
-        ctrlLogin ctrlLogin = new ctrlLogin(login,info);
+        tbEmpleados emp = new tbEmpleados();
+        ctrlLogin ctrlLogin = new ctrlLogin(login,info,emp);
         login.setVisible(true);
     }
     

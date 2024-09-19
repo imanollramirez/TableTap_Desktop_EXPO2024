@@ -6,10 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class pnlPerfil extends javax.swing.JPanel {
-
-    /**
-     * Creates new form pnlPerfil
-     */
+    
     public pnlPerfil() {
         initComponents();
         try {
@@ -27,7 +24,6 @@ public class pnlPerfil extends javax.swing.JPanel {
             lblNombreEmpleado.setFont(Otro);
             lblApellidosEmpleado.setFont(Otro);
             lblCargoEmpleado.setFont(Otro);
-            btnCerrarSesion.setFont(poppinsFont);
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
         }
@@ -46,7 +42,6 @@ public class pnlPerfil extends javax.swing.JPanel {
         txtTelefonoPerfil = new javax.swing.JTextField();
         txtCorreoPerfil = new javax.swing.JTextField();
         txtDUIperfil = new javax.swing.JTextField();
-        btnCerrarSesion = new javax.swing.JLabel();
         lblNombreEmpleado = new javax.swing.JLabel();
         lblApellidosEmpleado = new javax.swing.JLabel();
         lblCargoEmpleado = new javax.swing.JLabel();
@@ -59,39 +54,33 @@ public class pnlPerfil extends javax.swing.JPanel {
         txtTelefonoPerfil.setToolTipText("Ingrese su nombre de usuario");
         txtTelefonoPerfil.setBorder(null);
         txtTelefonoPerfil.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel1.add(txtTelefonoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 491, 290, 40));
+        jPanel1.add(txtTelefonoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 493, 290, 40));
 
         txtCorreoPerfil.setEditable(false);
         txtCorreoPerfil.setForeground(new java.awt.Color(0, 0, 0));
         txtCorreoPerfil.setToolTipText("Ingrese su nombre de usuario");
         txtCorreoPerfil.setBorder(null);
         txtCorreoPerfil.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel1.add(txtCorreoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 285, 290, 40));
+        jPanel1.add(txtCorreoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 286, 290, 40));
 
         txtDUIperfil.setEditable(false);
         txtDUIperfil.setForeground(new java.awt.Color(0, 0, 0));
         txtDUIperfil.setToolTipText("Ingrese su nombre de usuario");
         txtDUIperfil.setBorder(null);
         txtDUIperfil.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel1.add(txtDUIperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 388, 290, 40));
-
-        btnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
-        btnCerrarSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnCerrarSesion.setText("Cerrar Sesión");
-        jPanel1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 590, 380, 80));
+        jPanel1.add(txtDUIperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 290, 40));
 
         lblNombreEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblNombreEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         lblNombreEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNombreEmpleado.setText("Nombre del empleado");
-        jPanel1.add(lblNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 530, 410, 50));
+        jPanel1.add(lblNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 580, 410, 50));
 
         lblApellidosEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblApellidosEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         lblApellidosEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblApellidosEmpleado.setText("Apellidos del empleado");
-        jPanel1.add(lblApellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 410, 50));
+        jPanel1.add(lblApellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 630, 410, 50));
 
         lblCargoEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblCargoEmpleado.setForeground(new java.awt.Color(255, 0, 0));
@@ -117,7 +106,6 @@ public class pnlPerfil extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
-    public javax.swing.JLabel btnCerrarSesion;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel lblApellidosEmpleado;
     public javax.swing.JLabel lblCargoEmpleado;

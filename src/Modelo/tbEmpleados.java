@@ -6,6 +6,14 @@ import java.sql.ResultSet;
 import javax.swing.JComboBox;
 
 public class tbEmpleados {
+    
+    public String Nombre;
+    public String Apellidos;
+    public String Correo;
+    public String DUI;
+    public String Telefono;
+    public String Cargo;
+    
 
     private String idEmpleado;
     private String NombreEmpleado;
@@ -73,6 +81,45 @@ public class tbEmpleados {
             System.out.println("Error: " + e);
         }
 
+    }
+    
+    public void DatosPerfil(String NombreUsuario)
+    {       
+        try(Connection conexion = claseConexion.getCon();)
+        {    
+        
+        PreparedStatement idUs = conexion.prepareStatement("SELECT * FROM Usuario WHERE NombreUsuario = ?");
+        idUs.setString(1,NombreUsuario);
+        
+        try(ResultSet getId = idUs.executeQuery())
+        {
+            if(getId.next())
+            {
+                
+        PreparedStatement datos = conexion.prepareStatement("SELECT *  FROM Empleado E INNER JOIN CargoEmpleado C ON E.idCargoEmpleado = C.idCargoEmpleado WHERE idUsuario = ?");
+        datos.setString(1,getId.getString("idUsuario"));
+        try(ResultSet rs = datos.executeQuery())
+        {
+        
+            if(rs.next())
+            {
+            Nombre = rs.getString("NombreEmpleado");
+            Apellidos = rs.getString("ApellidoEmpleado");
+            Correo = rs.getString("CorreoEmpleado");
+            DUI = rs.getString("DUI");
+            Telefono = rs.getString("TelefonoEmpleado");
+            Cargo = rs.getString("CargoEmpleado");
+            }
+            
+        }
+        
+            }
+        }
+        
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        
     }
       
 }

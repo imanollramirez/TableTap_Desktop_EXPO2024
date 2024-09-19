@@ -7,6 +7,7 @@ import Controlador.ctrlReservacionMesas;
 import Vista.pnlPerfil;
 import Modelo.tbClientes;
 import Modelo.tbMesas;
+import Modelo.tbEmpleados;
 import Vista.pnlClientesRegistrados;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -14,9 +15,11 @@ import java.awt.event.MouseListener;
 public class ctrlMenu implements MouseListener{
 
     private frmMenu VISTA;
-    public ctrlMenu (frmMenu vista)
+    private tbEmpleados INFO;
+    public ctrlMenu (frmMenu vista, tbEmpleados info)
     {
         this.VISTA = vista;
+        this.INFO = info;
       
         vista.btnMenuInicio.addMouseListener(this);
         vista.btnAgregarCliente.addMouseListener(this);
@@ -99,8 +102,15 @@ public class ctrlMenu implements MouseListener{
         }
         if(e.getSource() == VISTA.btnPerfil)
         {
-            BotonSeleccionado(e);
+            BotonSeleccionado(e);            
             pnlPerfil perfil = new pnlPerfil();
+            perfil.txtCorreoPerfil.setText(INFO.Correo);
+            perfil.txtDUIperfil.setText(INFO.DUI);
+            perfil.txtTelefonoPerfil.setText(INFO.Telefono);
+            perfil.lblNombreEmpleado.setText(INFO.Nombre);
+            perfil.lblApellidosEmpleado.setText(INFO.Apellidos);
+            perfil.lblCargoEmpleado.setText(INFO.Cargo);
+            
             VISTA.pnlMainContainer.removeAll();
             VISTA.pnlMainContainer.add(perfil);
             VISTA.pnlMainContainer.revalidate();

@@ -2,7 +2,8 @@ package Controlador;
 
 import Vista.frmLogin;
 import Modelo.tbUsuarios;
-import static Vista.frmMenu.initFrmMenu;
+import Modelo.tbEmpleados;
+import Vista.frmMenu;
 import static Vista.frmRecuperarContrasena.initFrmRecuperarContrasena;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -11,12 +12,14 @@ import javax.swing.JOptionPane;
 public class ctrlLogin implements MouseListener{
 
     frmLogin VISTA;
-    tbUsuarios MODELO;
+    tbUsuarios USUARIO;
+    tbEmpleados EMPLEADOS;
     
-    public ctrlLogin(frmLogin vista, tbUsuarios modelo)
+    public ctrlLogin(frmLogin vista, tbUsuarios usuario, tbEmpleados empleados)
     {
         this.VISTA = vista;
-        this.MODELO = modelo;
+        this.USUARIO = usuario;
+        this.EMPLEADOS = empleados;
         
         vista.btnLogin.addMouseListener(this);
         vista.btnRecuperarCon.addMouseListener(this);
@@ -26,13 +29,16 @@ public class ctrlLogin implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         if(e.getSource() == VISTA.btnLogin)
         {
-            MODELO.setNombreUsuario(VISTA.txtUsuario.getText());
-            MODELO.setContrasenaUsuario(MODELO.ContrasenaEncriptada(VISTA.txtContrasena.getText()));
-            if(MODELO.IniciarSesion() == true)
+            USUARIO.setNombreUsuario(VISTA.txtUsuario.getText());
+            USUARIO.setContrasenaUsuario(USUARIO.ContrasenaEncriptada(VISTA.txtContrasena.getText()));
+            if(USUARIO.IniciarSesion() == true)
             {
-                if(MODELO.RevisarCargo() == true)
-                {    
-                initFrmMenu();
+                if(USUARIO.RevisarCargo() == true)
+                {
+                EMPLEADOS.DatosPerfil(VISTA.txtUsuario.getText());
+                frmMenu menu = new frmMenu();
+                ctrlMenu ctrl = new ctrlMenu(menu,EMPLEADOS);
+                menu.setVisible(true);
                 VISTA.dispose();
                 }
                 else
