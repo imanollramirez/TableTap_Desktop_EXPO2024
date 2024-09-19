@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.tbClientes;
 import Modelo.tbMesas;
 import Modelo.tbEmpleados;
+import Vista.frmMenu;
 import Vista.pnlRegistrarClientes;
 import Vista.frmInformacionCliente;
 import java.awt.event.MouseEvent;
@@ -13,11 +14,13 @@ public class ctrlReservacionMesas implements MouseListener {
 
     tbMesas MODELO;
     pnlRegistrarClientes VISTA;
+    frmMenu MENU;
     
-    public ctrlReservacionMesas (pnlRegistrarClientes vista, tbMesas modelo)
+    public ctrlReservacionMesas (pnlRegistrarClientes vista, tbMesas modelo,frmMenu menu)
     {
         this.MODELO = modelo;
         this.VISTA = vista;
+        this.MENU = menu;
         
         vista.Mesa1.addMouseListener(this);
         vista.Mesa2.addMouseListener(this);
@@ -44,6 +47,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -61,6 +65,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -78,6 +83,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -95,6 +101,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -112,6 +119,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -129,6 +137,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -146,6 +155,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -163,6 +173,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -180,6 +191,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -197,6 +209,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -214,6 +227,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();
@@ -231,6 +245,7 @@ public class ctrlReservacionMesas implements MouseListener {
             else
             {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
+                
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
                 tbEmpleados em = new tbEmpleados();

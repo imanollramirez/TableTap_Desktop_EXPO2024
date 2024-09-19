@@ -6,7 +6,7 @@ import Vista.frmInformacionCliente;
 import Modelo.tbClientes;
 import Modelo.tbMesas;
 import Modelo.tbEmpleados;
-import Vista.pnlRegistrarClientes;
+import Vista.frmMenu;
 import java.util.UUID;
 import javax.swing.JOptionPane;
 
@@ -87,17 +87,22 @@ public class ctrlInformacionCliente implements MouseListener{
          MESAS.setIdMesa(MESAS.getIdMesa());
          MESAS.setEstadoMesa("Ocupada");
          MESAS.setIdCliente(idCliente);
-         MESAS.setIdEmpleado(MESAS.getIdEmpleado());
-         
+            
+
+         if(CLIENTES.ExisteDUI() == true)
+         {
+           JOptionPane.showMessageDialog(null, "El número de DUI ya está registrado.");
+
+         }
+         else
+         {
          CLIENTES.RegistrarCliente();
          MESAS.ReservarMesa();
             
          JOptionPane.showMessageDialog(null, "Se registró el cliente correctamente.");
-         pnlRegistrarClientes cl = new pnlRegistrarClientes();
-         tbMesas mesas = new tbMesas();
-         ctrlReservacionMesas ctrlReservar = new ctrlReservacionMesas(cl,mesas);
-         mesas.EstadoMesa(cl);
-         VISTA.dispose();   
+         VISTA.dispose(); 
+         }
+         
         }
     }
     

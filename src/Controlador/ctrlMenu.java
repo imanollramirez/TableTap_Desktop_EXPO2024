@@ -70,8 +70,9 @@ public class ctrlMenu implements MouseListener{
         {
             BotonSeleccionado(e);
             pnlRegistrarClientes cl = new pnlRegistrarClientes();
+            frmMenu menu = new frmMenu();
             tbMesas mesas = new tbMesas();
-            ctrlReservacionMesas ctrlReservar = new ctrlReservacionMesas(cl,mesas);
+            ctrlReservacionMesas ctrlReservar = new ctrlReservacionMesas(cl,mesas,menu);
             mesas.EstadoMesa(cl);
             
             VISTA.pnlMainContainer.removeAll();

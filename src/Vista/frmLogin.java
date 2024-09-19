@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import Controlador.ctrlLogin;
+import Modelo.tbUsuarios;
 import static Vista.frmMenu.initFrmMenu;
 import static Vista.frmRecuperarContrasena.initFrmRecuperarContrasena;
 import java.awt.Font;
@@ -32,6 +34,8 @@ public class frmLogin extends javax.swing.JFrame {
 
     public static void initFrmLogin(){
         frmLogin login = new frmLogin();
+        tbUsuarios info = new tbUsuarios();
+        ctrlLogin ctrlLogin = new ctrlLogin(login,info);
         login.setVisible(true);
     }
     
@@ -65,11 +69,6 @@ public class frmLogin extends javax.swing.JFrame {
         btnLogin.setText("Ingresar");
         btnLogin.setBorder(null);
         btnLogin.setBorderPainted(false);
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
-            }
-        });
         jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, 320, 60));
 
         txtContrasena.setToolTipText("Ingrese su contraseña");
@@ -85,11 +84,6 @@ public class frmLogin extends javax.swing.JFrame {
         btnRecuperarCon.setForeground(new java.awt.Color(102, 102, 102));
         btnRecuperarCon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnRecuperarCon.setText("Olvidé mi contraseña");
-        btnRecuperarCon.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnRecuperarConMouseClicked(evt);
-            }
-        });
         jPanel1.add(btnRecuperarCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 170, 30));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Login_img.png"))); // NOI18N
@@ -109,16 +103,6 @@ public class frmLogin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-      initFrmMenu();
-      this.dispose();
-    }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void btnRecuperarConMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRecuperarConMouseClicked
-        initFrmRecuperarContrasena();
-        this.dispose();
-    }//GEN-LAST:event_btnRecuperarConMouseClicked
 
     /**
      * @param args the command line arguments
@@ -159,10 +143,10 @@ public class frmLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnLogin;
-    private javax.swing.JLabel btnRecuperarCon;
+    public javax.swing.JLabel btnRecuperarCon;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txtContrasena;
-    private javax.swing.JTextField txtUsuario;
+    public javax.swing.JPasswordField txtContrasena;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

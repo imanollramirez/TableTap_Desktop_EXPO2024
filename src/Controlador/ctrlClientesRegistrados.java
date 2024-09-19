@@ -115,6 +115,7 @@ public class ctrlClientesRegistrados implements MouseListener{
             MESAS.EliminarMesa(VISTA.jtbClientesRegistrados);
             CLIENTES.EliminarCliente(VISTA.jtbClientesRegistrados);
             JOptionPane.showMessageDialog(null, "Se eliminó el cliente correctamente.");
+            Limpiar();
         
             CLIENTES.MostrarClientes(VISTA.jtbClientesRegistrados);
             //Ocultar el ID

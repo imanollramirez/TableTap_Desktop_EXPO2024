@@ -13,14 +13,20 @@ public class pnlPerfil extends javax.swing.JPanel {
     public pnlPerfil() {
         initComponents();
         try {
-            Font poppinsFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Regular.ttf"));
-            poppinsFont = poppinsFont.deriveFont(15f); 
-            txtCorreoPerfil.setFont(poppinsFont);
-            txtDUIperfil.setFont(poppinsFont);
-            txtTelefonoPerfil.setFont(poppinsFont);
-            lblNombreEmpleado.setFont(poppinsFont);
-            lblApellidosEmpleado.setFont(poppinsFont);
-            lblCargoEmpleado.setFont(poppinsFont);
+            Font poppinsFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Bold.ttf"));
+            poppinsFont = poppinsFont.deriveFont(22f); 
+            
+            Font Info = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Regular.ttf"));
+            Info = Info.deriveFont(20f);
+            
+            Font Otro = poppinsFont;
+            
+            txtCorreoPerfil.setFont(Info);
+            txtDUIperfil.setFont(Info);
+            txtTelefonoPerfil.setFont(Info);
+            lblNombreEmpleado.setFont(Otro);
+            lblApellidosEmpleado.setFont(Otro);
+            lblCargoEmpleado.setFont(Otro);
             btnCerrarSesion.setFont(poppinsFont);
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
@@ -48,25 +54,32 @@ public class pnlPerfil extends javax.swing.JPanel {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        txtTelefonoPerfil.setEditable(false);
         txtTelefonoPerfil.setForeground(new java.awt.Color(0, 0, 0));
         txtTelefonoPerfil.setToolTipText("Ingrese su nombre de usuario");
         txtTelefonoPerfil.setBorder(null);
+        txtTelefonoPerfil.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtTelefonoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 491, 290, 40));
 
+        txtCorreoPerfil.setEditable(false);
         txtCorreoPerfil.setForeground(new java.awt.Color(0, 0, 0));
         txtCorreoPerfil.setToolTipText("Ingrese su nombre de usuario");
         txtCorreoPerfil.setBorder(null);
+        txtCorreoPerfil.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtCorreoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 285, 290, 40));
 
+        txtDUIperfil.setEditable(false);
         txtDUIperfil.setForeground(new java.awt.Color(0, 0, 0));
         txtDUIperfil.setToolTipText("Ingrese su nombre de usuario");
         txtDUIperfil.setBorder(null);
+        txtDUIperfil.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtDUIperfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 388, 290, 40));
 
         btnCerrarSesion.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
         btnCerrarSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnCerrarSesion.setText("Cerrar Sesión");
-        jPanel1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 590, 380, 80));
+        jPanel1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 590, 380, 80));
 
         lblNombreEmpleado.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblNombreEmpleado.setForeground(new java.awt.Color(0, 0, 0));
@@ -104,13 +117,13 @@ public class pnlPerfil extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
-    private javax.swing.JLabel btnCerrarSesion;
+    public javax.swing.JLabel btnCerrarSesion;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblApellidosEmpleado;
-    private javax.swing.JLabel lblCargoEmpleado;
-    private javax.swing.JLabel lblNombreEmpleado;
-    private javax.swing.JTextField txtCorreoPerfil;
-    private javax.swing.JTextField txtDUIperfil;
-    private javax.swing.JTextField txtTelefonoPerfil;
+    public javax.swing.JLabel lblApellidosEmpleado;
+    public javax.swing.JLabel lblCargoEmpleado;
+    public javax.swing.JLabel lblNombreEmpleado;
+    public javax.swing.JTextField txtCorreoPerfil;
+    public javax.swing.JTextField txtDUIperfil;
+    public javax.swing.JTextField txtTelefonoPerfil;
     // End of variables declaration//GEN-END:variables
 }

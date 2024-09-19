@@ -2,7 +2,6 @@ package Modelo;
 
 import Vista.pnlClientesRegistrados;
 import java.sql.*;
-import java.util.UUID;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -192,6 +191,29 @@ public class tbClientes {
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
+    }
+    
+    public boolean ExisteDUI()
+    {
+        Connection conexion = claseConexion.getCon(); 
+        try {
+            PreparedStatement existeDUI = conexion.prepareStatement("SELECT * FROM Cliente WHERE DUIcliente = ?");
+            existeDUI.setString(1, getDUIcliente());
+            ResultSet rs = existeDUI.executeQuery();
+            
+            if(rs.next())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return false;
     }
 
 }  
