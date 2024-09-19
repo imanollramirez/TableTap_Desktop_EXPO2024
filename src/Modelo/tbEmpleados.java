@@ -15,7 +15,6 @@ public class tbEmpleados {
     public String Cargo;
     public String Foto;
     
-
     private String idEmpleado;
     private String NombreEmpleado;
     
@@ -59,28 +58,44 @@ public class tbEmpleados {
           Connection conexion = claseConexion.getCon();
           
           //Para verificar si hay meseros ocupados, si los hay esos no se muestran.
-          PreparedStatement meseroOcupado = conexion.prepareStatement("SELECT *  FROM Mesa");
+          PreparedStatement meseroOcupado = conexion.prepareStatement("SELECT * FROM Mesa");
           
           try(ResultSet res = meseroOcupado.executeQuery())
           {
-              while(res.next())
+              if(!res.next())
               {
-                  //Para mandar a traer los meseros.
-                PreparedStatement cargo = conexion.prepareStatement("SELECT *  FROM Empleado E INNER JOIN CargoEmpleado C ON E.idCargoEmpleado = C.idCargoEmpleado WHERE CargoEmpleado = ? AND idEmpleado != ?");
+                //Para mandar a traer los meseros.
+                PreparedStatement cargo = conexion.prepareStatement("SELECT * FROM Empleado E INNER JOIN CargoEmpleado C ON E.idCargoEmpleado = C.idCargoEmpleado WHERE CargoEmpleado = ?");
                 cargo.setString(1, "Mesero");
-                cargo.setString(2,res.getString("idEmpleado"));
                 
-                  try(ResultSet rs = cargo.executeQuery();)
-                  {
+                try(ResultSet rs = cargo.executeQuery();)
+                {
                     while(rs.next())
-          {
+                    {
                     String nombreMeseros = rs.getString("NombreEmpleado");
                     String idMeseros = rs.getString("idEmpleado");
                     cb.addItem(new tbEmpleados(idMeseros,nombreMeseros));
-          }
-                  }
-                  
+                    }
+                }
               }
+              else
+              {
+                //Para mandar a traer los meseros que no están ocupados.
+                PreparedStatement cargo = conexion.prepareStatement("SELECT *  FROM Empleado E INNER JOIN CargoEmpleado C ON E.idCargoEmpleado = C.idCargoEmpleado WHERE CargoEmpleado = ? AND idEmpleado != ?");
+                cargo.setString(1, "Mesero");
+                cargo.setString(2,res.getString("idEmpleado"));
+                    
+                try(ResultSet rs = cargo.executeQuery();)
+                {
+                    while(rs.next())
+                    {
+                    String nombreMeseros = rs.getString("NombreEmpleado");
+                    String idMeseros = rs.getString("idEmpleado");
+                    cb.addItem(new tbEmpleados(idMeseros,nombreMeseros));
+                    }
+                }
+              }
+            
           }
           
         } catch (Exception e) {
