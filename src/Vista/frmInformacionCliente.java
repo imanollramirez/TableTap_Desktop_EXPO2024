@@ -57,6 +57,7 @@ public class frmInformacionCliente extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(500, 620));
         setMinimumSize(new java.awt.Dimension(500, 620));
         setResizable(false);
 

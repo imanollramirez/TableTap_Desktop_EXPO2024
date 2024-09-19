@@ -8,6 +8,8 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
+import Controlador.ctrlRecuperacionContrasena;
+import Modelo.tbUsuarios;
 
 /**
  *
@@ -20,7 +22,7 @@ public class frmRecuperarContrasena extends javax.swing.JFrame {
         try {
             Font poppinsFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Regular.ttf"));
             poppinsFont = poppinsFont.deriveFont(15f); 
-            txtUsuario.setFont(poppinsFont);
+            txtCorreoRecu.setFont(poppinsFont);
             btnEnviarCod.setFont(poppinsFont);
             btnEnviarCod.setFont(poppinsFont.deriveFont(18f));
         } catch (FontFormatException | IOException e) {
@@ -30,8 +32,11 @@ public class frmRecuperarContrasena extends javax.swing.JFrame {
 
     public static void initFrmRecuperarContrasena()
     {
-     frmRecuperarContrasena recu = new frmRecuperarContrasena();
-     recu.setVisible(true);
+                frmRecuperarContrasena recu = new frmRecuperarContrasena();
+                tbUsuarios u = new tbUsuarios();
+                ctrlRecuperacionContrasena ctrl = new ctrlRecuperacionContrasena(recu,u);
+                recu.setVisible(true);
+                recu.setResizable(false);
     }
     
     /**
@@ -44,24 +49,23 @@ public class frmRecuperarContrasena extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtUsuario = new javax.swing.JTextField();
+        txtCorreoRecu = new javax.swing.JTextField();
         btnEnviarCod = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Recuperación de Contraseña");
-        setMaximumSize(new java.awt.Dimension(1366, 768));
         setMinimumSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        txtUsuario.setToolTipText("Ingrese su nombre de usuario");
-        txtUsuario.setBorder(null);
-        txtUsuario.setPreferredSize(new java.awt.Dimension(65, 16));
-        jPanel1.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 383, 390, 40));
+        txtCorreoRecu.setForeground(new java.awt.Color(0, 0, 0));
+        txtCorreoRecu.setToolTipText("Ingrese su nombre de usuario");
+        txtCorreoRecu.setBorder(null);
+        txtCorreoRecu.setPreferredSize(new java.awt.Dimension(65, 16));
+        jPanel1.add(txtCorreoRecu, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 383, 390, 40));
 
         btnEnviarCod.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnEnviarCod.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,15 +125,14 @@ public class frmRecuperarContrasena extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmRecuperarContrasena().setVisible(true);
-                new frmRecuperarContrasena().setResizable(false);
+                initFrmRecuperarContrasena();
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel btnEnviarCod;
+    public javax.swing.JLabel btnEnviarCod;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtUsuario;
+    public javax.swing.JTextField txtCorreoRecu;
     // End of variables declaration//GEN-END:variables
 }
