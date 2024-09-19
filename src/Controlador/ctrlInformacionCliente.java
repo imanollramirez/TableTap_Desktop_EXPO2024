@@ -5,6 +5,9 @@ import java.awt.event.MouseListener;
 import Vista.frmInformacionCliente;
 import Modelo.tbClientes;
 import Modelo.tbMesas;
+import Modelo.tbEmpleados;
+import Vista.pnlRegistrarClientes;
+import java.util.UUID;
 import javax.swing.JOptionPane;
 
 public class ctrlInformacionCliente implements MouseListener{
@@ -12,14 +15,31 @@ public class ctrlInformacionCliente implements MouseListener{
     frmInformacionCliente VISTA;
     tbClientes CLIENTES;
     tbMesas MESAS;
+    tbEmpleados EMPLEADOS;
     
-    public ctrlInformacionCliente(frmInformacionCliente vista,tbClientes clientes, tbMesas mesas)
+    public ctrlInformacionCliente(frmInformacionCliente vista,tbClientes clientes, tbMesas mesas, tbEmpleados empleados, int NumMesa)
     {
         this.VISTA = vista;
         this.CLIENTES = clientes;
         this.MESAS = mesas;
+        this.EMPLEADOS = empleados;
         
         vista.btnListo.addMouseListener(this);
+        empleados.CargarMeseros(vista.cbMesero);
+        mesas.setIdMesa(NumMesa);
+        
+        vista.cbMesero.addActionListener(e -> 
+         {
+             if(e.getSource() == vista.cbMesero)
+                {
+                tbEmpleados selectedItem = (tbEmpleados) vista.cbMesero.getSelectedItem();
+                if(selectedItem != null)
+                {
+                    String idEmpleado = selectedItem.getIdEmpleado();
+                    mesas.setIdEmpleado(idEmpleado);
+                }
+                }
+         });
     }
     
     @Override
@@ -56,7 +76,27 @@ public class ctrlInformacionCliente implements MouseListener{
         }
         else
         {
-         JOptionPane.showMessageDialog(null, "Se Registró el cliente correctamente.");
+         String idCliente = UUID.randomUUID().toString();
+            
+         CLIENTES.setIdCliente(idCliente);
+         CLIENTES.setNombreCliente(VISTA.txtNombreCliente.getText());
+         CLIENTES.setApellidoCliente(VISTA.txtApellidosCliente.getText());
+         CLIENTES.setCorreoCliente(VISTA.txtCorreoCliente.getText());
+         CLIENTES.setDUIcliente(VISTA.txtDUIcliente.getText());
+         
+         MESAS.setIdMesa(MESAS.getIdMesa());
+         MESAS.setEstadoMesa("Ocupada");
+         MESAS.setIdCliente(idCliente);
+         MESAS.setIdEmpleado(MESAS.getIdEmpleado());
+         
+         CLIENTES.RegistrarCliente();
+         MESAS.ReservarMesa();
+            
+         JOptionPane.showMessageDialog(null, "Se registró el cliente correctamente.");
+         pnlRegistrarClientes cl = new pnlRegistrarClientes();
+         tbMesas mesas = new tbMesas();
+         ctrlReservacionMesas ctrlReservar = new ctrlReservacionMesas(cl,mesas);
+         mesas.EstadoMesa(cl);
          VISTA.dispose();   
         }
     }

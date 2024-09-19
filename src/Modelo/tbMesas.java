@@ -4,13 +4,14 @@ import Vista.pnlRegistrarClientes;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JTable;
 
 public class tbMesas{
     private int idMesa;
     private String EstadoMesa;
-    private int idCliente;
-    private int idEmpleado;
+    private String idCliente;
+    private String idEmpleado;
 
     public int getIdMesa() {
         return idMesa;
@@ -28,19 +29,19 @@ public class tbMesas{
         this.EstadoMesa = EstadoMesa;
     }
 
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 
-    public int getIdEmpleado() {
+    public String getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
+    public void setIdEmpleado(String idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
     
@@ -72,7 +73,7 @@ public class tbMesas{
             revisarEstado.setString(1, "Ocupada");
             ResultSet rs = revisarEstado.executeQuery();
             
-        if (rs.next()) {
+        while (rs.next()) {
         String idMesa = rs.getString("idMesa");
     
         switch (idMesa) {
@@ -120,6 +121,25 @@ public class tbMesas{
             
         } catch (Exception e) {
             System.out.println("Error: " + e);
+        }
+    }
+    
+    public void ReservarMesa()
+    {
+        Connection conexion = claseConexion.getCon();
+        try {
+            //Creamos el PreparedStatement que ejecutará la Query
+            PreparedStatement nuevaMesa = conexion.prepareStatement("INSERT INTO Mesa(idMesa,EstadoMesa,idCliente,idEmpleado) VALUES(?,?,?,?)");
+            //Establecer valores de la consulta SQL
+            nuevaMesa.setInt(1,getIdMesa());
+            nuevaMesa.setString(2,getEstadoMesa());
+            nuevaMesa.setString(3,getIdCliente());
+            nuevaMesa.setString(4,getIdEmpleado());//Mesero encargado.
+            //Ejecutar la consulta
+            nuevaMesa.executeUpdate();
+            
+        } catch (SQLException ex) {
+            System.out.println("Error: " + ex);
         }
     }
 }

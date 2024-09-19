@@ -8,17 +8,17 @@ import javax.swing.table.DefaultTableModel;
 
 public class tbClientes {
 
-    private int idCliente;
+    private String idCliente;
     private String NombreCliente;
     private String ApellidoCliente;
     private String CorreoCliente;
     private String DUIcliente;
     
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 
@@ -109,7 +109,7 @@ public class tbClientes {
             //Creamos el PreparedStatement que ejecutará la Query
             PreparedStatement nuevoCliente = conexion.prepareStatement("INSERT INTO Cliente (idCliente,NombreCliente,ApellidoCliente,CorreoCliente,DUIcliente) VALUES(?,?,?,?,?)");
             //Establecer valores de la consulta SQL
-            nuevoCliente.setString(1,UUID.randomUUID().toString());
+            nuevoCliente.setString(1,getIdCliente());
             nuevoCliente.setString(2, getNombreCliente());
             nuevoCliente.setString(3, getApellidoCliente());
             nuevoCliente.setString(4, getCorreoCliente());

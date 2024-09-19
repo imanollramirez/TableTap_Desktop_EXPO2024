@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.tbClientes;
 import Modelo.tbMesas;
+import Modelo.tbEmpleados;
 import Vista.pnlRegistrarClientes;
 import Vista.frmInformacionCliente;
 import java.awt.event.MouseEvent;
@@ -45,8 +46,9 @@ public class ctrlReservacionMesas implements MouseListener {
                 frmInformacionCliente infoCl = new frmInformacionCliente();
                 tbClientes cl = new tbClientes();
                 tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
                 
-                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas);
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,1);
                 infoCl.setVisible(true);
             }
         }
@@ -56,12 +58,32 @@ public class ctrlReservacionMesas implements MouseListener {
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
             }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,2);
+                infoCl.setVisible(true);
+            }
         }
         if(e.getSource() == VISTA.Mesa3)
         {
             if(VISTA.Mesa3.isEnabled() == false)
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
+            }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,3);
+                infoCl.setVisible(true);
             }
         }
         if(e.getSource() == VISTA.Mesa4)
@@ -70,12 +92,32 @@ public class ctrlReservacionMesas implements MouseListener {
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
             }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,4);
+                infoCl.setVisible(true);
+            }
         }
         if(e.getSource() == VISTA.Mesa5)
         {
             if(VISTA.Mesa5.isEnabled() == false)
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
+            }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,5);
+                infoCl.setVisible(true);
             }
         }
         if(e.getSource() == VISTA.Mesa6)
@@ -84,12 +126,32 @@ public class ctrlReservacionMesas implements MouseListener {
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
             }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,6);
+                infoCl.setVisible(true);
+            }
         }
         if(e.getSource() == VISTA.Mesa7)
         {
             if(VISTA.Mesa7.isEnabled() == false)
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
+            }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,7);
+                infoCl.setVisible(true);
             }
         }
         if(e.getSource() == VISTA.Mesa8)
@@ -98,12 +160,32 @@ public class ctrlReservacionMesas implements MouseListener {
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
             }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,8);
+                infoCl.setVisible(true);
+            }
         }
         if(e.getSource() == VISTA.Mesa9)
         {
             if(VISTA.Mesa9.isEnabled() == false)
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
+            }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,9);
+                infoCl.setVisible(true);
             }
         }
         if(e.getSource() == VISTA.Mesa10)
@@ -112,6 +194,16 @@ public class ctrlReservacionMesas implements MouseListener {
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
             }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,10);
+                infoCl.setVisible(true);
+            }
         }
         if(e.getSource() == VISTA.Mesa11)
         {
@@ -119,12 +211,32 @@ public class ctrlReservacionMesas implements MouseListener {
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
             }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,11);
+                infoCl.setVisible(true);
+            }
         }
         if(e.getSource() == VISTA.Mesa12)
         {
             if(VISTA.Mesa12.isEnabled() == false)
             {
                 JOptionPane.showMessageDialog(null, "La mesa no se encuentra disponible.");
+            }
+            else
+            {
+                frmInformacionCliente infoCl = new frmInformacionCliente();
+                tbClientes cl = new tbClientes();
+                tbMesas mesas = new tbMesas();
+                tbEmpleados em = new tbEmpleados();
+                
+                ctrlInformacionCliente ctrlInfo = new ctrlInformacionCliente(infoCl,cl,mesas,em,12);
+                infoCl.setVisible(true);
             }
         }
     }

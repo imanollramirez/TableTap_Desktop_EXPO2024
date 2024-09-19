@@ -83,7 +83,7 @@ public class frmInformacionCliente extends javax.swing.JFrame {
         jPanel1.add(txtDUIcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 420, 210, 30));
 
         cbMesero.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        cbMesero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbMesero.setToolTipText("Seleccione un mesero encargado");
         jPanel1.add(cbMesero, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 484, 110, 30));
 
         btnListo.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
