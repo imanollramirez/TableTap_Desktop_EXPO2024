@@ -9,8 +9,15 @@ import Modelo.tbClientes;
 import Modelo.tbMesas;
 import Modelo.tbEmpleados;
 import Vista.pnlClientesRegistrados;
+import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class ctrlMenu implements MouseListener{
 
@@ -61,6 +68,33 @@ public class ctrlMenu implements MouseListener{
         }
     }
     
+    //Tuve que buscar como hacerlo porque acá creo que no está disponible el Glide, pero basicamente
+    //esto lo que hace es que crea una nueva imagen, la cual tiene origen de la URL que está en la base de datos,
+    //la cual es del empleado en sesión.
+    public Image cargarImagen(String ImgUrl) {
+    try {
+        URL url = new URL(ImgUrl);
+        BufferedImage img = ImageIO.read(url);
+        return img;
+    } catch (IOException ex) {
+        ex.printStackTrace();
+        return null;
+    }
+    
+    }
+    
+    //Luego, cuando la URL ya se convierte en una Imagen, solo la asignamos al Jlabel, en este caso acá en JAVA.
+    //Recibe 2 parámetros, el del JLabel y la URL, simplemente crea un icono y se lo asigna al JLlabel.
+    public void AsignarImagen(JLabel imgFoto, String url) {
+    Image img = cargarImagen(url);
+    Image imgAjustada = img.getScaledInstance(360,390,Image.SCALE_SMOOTH);
+    if (img != null) {
+        ImageIcon icon = new ImageIcon(imgAjustada);
+        imgFoto.setIcon(icon);
+    } else {
+    }
+}
+    
     @Override
     public void mouseClicked(MouseEvent e) {
         if(e.getSource() == VISTA.btnMenuInicio)
@@ -110,6 +144,9 @@ public class ctrlMenu implements MouseListener{
             perfil.lblNombreEmpleado.setText(INFO.Nombre);
             perfil.lblApellidosEmpleado.setText(INFO.Apellidos);
             perfil.lblCargoEmpleado.setText(INFO.Cargo);
+            String imageUrl = INFO.Foto;
+            AsignarImagen(perfil.imgFotoPerfil, imageUrl);
+
             
             VISTA.pnlMainContainer.removeAll();
             VISTA.pnlMainContainer.add(perfil);

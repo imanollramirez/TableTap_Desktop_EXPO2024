@@ -13,6 +13,7 @@ public class tbEmpleados {
     public String DUI;
     public String Telefono;
     public String Cargo;
+    public String Foto;
     
 
     private String idEmpleado;
@@ -109,6 +110,7 @@ public class tbEmpleados {
             DUI = rs.getString("DUI");
             Telefono = rs.getString("TelefonoEmpleado");
             Cargo = rs.getString("CargoEmpleado");
+            Foto = rs.getString("Foto");
             }
             
         }
