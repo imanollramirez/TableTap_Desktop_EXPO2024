@@ -29,6 +29,12 @@ public class ctrlLogin implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         if(e.getSource() == VISTA.btnLogin)
         {
+            if(VISTA.txtUsuario.getText().isEmpty() || VISTA.txtContrasena.getText().isEmpty())
+            {
+                JOptionPane.showMessageDialog(null, "Complete los campos."); 
+            }
+            else
+            {
             USUARIO.setNombreUsuario(VISTA.txtUsuario.getText());
             USUARIO.setContrasenaUsuario(USUARIO.ContrasenaEncriptada(VISTA.txtContrasena.getText()));
             if(USUARIO.IniciarSesion() == true)
@@ -49,6 +55,7 @@ public class ctrlLogin implements MouseListener{
             else
             {
                JOptionPane.showMessageDialog(null, "El usuario o contraseña son incorrectos.");   
+            }   
             }
             
         }

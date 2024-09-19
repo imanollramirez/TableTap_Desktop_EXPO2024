@@ -56,26 +56,31 @@ public class tbEmpleados {
     {
         try
         {
-          String idCargoEmpleado = "";
           Connection conexion = claseConexion.getCon();
-          PreparedStatement cargo = conexion.prepareStatement("SELECT * FROM CargoEmpleado WHERE CargoEmpleado = ?");
-          cargo.setString(1, "Mesero");
-          ResultSet rs = cargo.executeQuery();
           
-          if(rs.next())
+          //Para verificar si hay meseros ocupados, si los hay esos no se muestran.
+          PreparedStatement meseroOcupado = conexion.prepareStatement("SELECT *  FROM Mesa");
+          
+          try(ResultSet res = meseroOcupado.executeQuery())
           {
-              idCargoEmpleado = rs.getString("idCargoEmpleado");
+              while(res.next())
+              {
+                  //Para mandar a traer los meseros.
+                PreparedStatement cargo = conexion.prepareStatement("SELECT *  FROM Empleado E INNER JOIN CargoEmpleado C ON E.idCargoEmpleado = C.idCargoEmpleado WHERE CargoEmpleado = ? AND idEmpleado != ?");
+                cargo.setString(1, "Mesero");
+                cargo.setString(2,res.getString("idEmpleado"));
+                
+                  try(ResultSet rs = cargo.executeQuery();)
+                  {
+                    while(rs.next())
+          {
+                    String nombreMeseros = rs.getString("NombreEmpleado");
+                    String idMeseros = rs.getString("idEmpleado");
+                    cb.addItem(new tbEmpleados(idMeseros,nombreMeseros));
           }
-          
-          PreparedStatement meseros = conexion.prepareStatement("SELECT * FROM Empleado WHERE idCargoEmpleado = ?");
-          meseros.setString(1, idCargoEmpleado);
-          ResultSet res = meseros.executeQuery();
-          
-          while(res.next())
-          {
-              String nombreMeseros = res.getString("NombreEmpleado");
-              String idMeseros = res.getString("idEmpleado");
-              cb.addItem(new tbEmpleados(idMeseros,nombreMeseros));
+                  }
+                  
+              }
           }
           
         } catch (Exception e) {

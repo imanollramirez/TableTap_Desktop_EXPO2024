@@ -97,7 +97,7 @@ public class pnlPerfil extends javax.swing.JPanel {
         imgFotoPerfil.setMaximumSize(new java.awt.Dimension(360, 360));
         imgFotoPerfil.setMinimumSize(new java.awt.Dimension(390, 390));
         imgFotoPerfil.setPreferredSize(new java.awt.Dimension(390, 390));
-        jPanel1.add(imgFotoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 165, 360, 390));
+        jPanel1.add(imgFotoPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 168, 360, 390));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Perfil_img.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
