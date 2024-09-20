@@ -4,6 +4,11 @@
  */
 package Vista;
 
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.io.File;
+import java.io.IOException;
+
 /**
  *
  * @author Aleim
@@ -15,6 +20,19 @@ public class frmCambiarContrasena extends javax.swing.JFrame {
      */
     public frmCambiarContrasena() {
         initComponents();
+        try {
+            Font poppins = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-regular.ttf"));
+            poppins = poppins.deriveFont(16f); 
+            
+            Font pop = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Bold.ttf"));
+            txtUsuario.setFont(poppins);
+            txtNuevaContra.setFont(poppins);
+            txtConfirmarNuevaContra.setFont(pop);
+            
+            
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -28,9 +46,15 @@ public class frmCambiarContrasena extends javax.swing.JFrame {
 
         Container = new javax.swing.JPanel();
         pnlMainContainer = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        panel = new javax.swing.JPanel();
+        txtConfirmarNuevaContra = new javax.swing.JTextField();
+        txtUsuario = new javax.swing.JTextField();
+        txtNuevaContra = new javax.swing.JTextField();
+        btnRestablecer = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(500, 620));
         setMinimumSize(new java.awt.Dimension(500, 620));
         setResizable(false);
 
@@ -39,15 +63,65 @@ public class frmCambiarContrasena extends javax.swing.JFrame {
         pnlMainContainer.setMaximumSize(new java.awt.Dimension(500, 620));
         pnlMainContainer.setMinimumSize(new java.awt.Dimension(500, 620));
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(500, 620));
+        jPanel1.setMinimumSize(new java.awt.Dimension(500, 620));
+
+        panel.setMaximumSize(new java.awt.Dimension(500, 620));
+        panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtConfirmarNuevaContra.setForeground(new java.awt.Color(0, 0, 0));
+        txtConfirmarNuevaContra.setToolTipText("Ingrese su nombre de usuario");
+        txtConfirmarNuevaContra.setBorder(null);
+        panel.add(txtConfirmarNuevaContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 441, 250, 40));
+
+        txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        txtUsuario.setToolTipText("Ingrese su nombre de usuario");
+        txtUsuario.setBorder(null);
+        panel.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 252, 250, 40));
+
+        txtNuevaContra.setForeground(new java.awt.Color(0, 0, 0));
+        txtNuevaContra.setToolTipText("Ingrese su nombre de usuario");
+        txtNuevaContra.setBorder(null);
+        panel.add(txtNuevaContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 348, 250, 40));
+
+        btnRestablecer.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnRestablecer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnRestablecer.setText("Restablecer");
+        panel.add(btnRestablecer, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 536, 130, 48));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CambiarContra_img.png"))); // NOI18N
+        panel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pnlMainContainerLayout = new javax.swing.GroupLayout(pnlMainContainer);
         pnlMainContainer.setLayout(pnlMainContainerLayout);
         pnlMainContainerLayout.setHorizontalGroup(
             pnlMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(pnlMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlMainContainerLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         pnlMainContainerLayout.setVerticalGroup(
             pnlMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 620, Short.MAX_VALUE)
+            .addGroup(pnlMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlMainContainerLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         Container.add(pnlMainContainer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 620));
@@ -93,6 +167,9 @@ public class frmCambiarContrasena extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(frmCambiarContrasena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -103,6 +180,13 @@ public class frmCambiarContrasena extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Container;
+    public javax.swing.JLabel btnRestablecer;
+    private javax.swing.JLabel fondo;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel panel;
     public javax.swing.JPanel pnlMainContainer;
+    public javax.swing.JTextField txtConfirmarNuevaContra;
+    public javax.swing.JTextField txtNuevaContra;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

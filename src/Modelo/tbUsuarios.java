@@ -127,5 +127,75 @@ public class tbUsuarios {
     return false;
 }
 
+    public void CambiarContrasena()
+    {
+        try
+        {         
+          Connection conexion = claseConexion.getCon();          
+                    
+          PreparedStatement Recu = conexion.prepareStatement("UPDATE Usuario SET ContrasenaUsuario = ? WHERE NombreUsuario = ?");
+          Recu.setString(1, getContrasenaUsuario());
+          Recu.setString(2, getNombreUsuario());
+          Recu.executeUpdate();
+          
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+    }
+    
+    public boolean existeUsuario()
+    {
+        try
+        {         
+          Connection conexion = claseConexion.getCon();          
+                    
+          PreparedStatement existe = conexion.prepareStatement("SELECT * FROM Usuario WHERE NombreUsuario = ?");
+          existe.setString(1, getContrasenaUsuario());
+          ResultSet rs = existe.executeQuery();
+          if(rs.next())
+          {
+              return true;
+          }
+          else
+          {
+              return false;
+          }
+          
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return false;
+    }
+    
+    public boolean RevisarContra()
+    {
+        try
+        {         
+          Connection conexion = claseConexion.getCon();          
+                    
+          PreparedStatement existe = conexion.prepareStatement("SELECT ContrasenaUsuario FROM Usuario WHERE NombreUsuario = ?");
+          existe.setString(1, getContrasenaUsuario());
+          ResultSet rs = existe.executeQuery();
+          if(rs.next())
+          {
+              if(rs.getString("ContrasenaUsuario") == getContrasenaUsuario())
+              {    
+              return true;
+              }
+              else
+              {
+                  return false;
+              }
+          }
+          else
+          {
+              return false;
+          }
+          
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return false;
+    }
 
 }

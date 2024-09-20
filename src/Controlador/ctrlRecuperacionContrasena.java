@@ -2,9 +2,8 @@ package Controlador;
 
 import Modelo.tbUsuarios;
 import Modelo.EnviarCorreo;
-import Vista.frmCambiarContrasena;
+import Vista.frmVerificarCodRecuperacion;
 import Vista.frmRecuperarContrasena;
-import static Vista.frmRecuperarContrasena.initFrmRecuperarContrasena;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
@@ -29,6 +28,12 @@ public class ctrlRecuperacionContrasena implements MouseListener{
     public void mouseClicked(MouseEvent e) {
         if(e.getSource() == VISTA.btnEnviarCod)
         {
+            if(VISTA.txtCorreoRecu.getText().isEmpty())
+            {
+                JOptionPane.showMessageDialog(null, "Escriba su correo eletrónico.");    
+            }
+            else
+            {    
             Random random = new Random();
         
             // Genera un número aleatorio de 8 dígitos 
@@ -39,6 +44,9 @@ public class ctrlRecuperacionContrasena implements MouseListener{
             
             EnviarCorreo.enviarCorreo(receptor, asunto, Code);
             JOptionPane.showMessageDialog(null, "Se envió el código de recuperación su correo.");    
+            frmVerificarCodRecuperacion frm = new frmVerificarCodRecuperacion();
+            frm.setVisible(true);
+            }
         }
     }
 
