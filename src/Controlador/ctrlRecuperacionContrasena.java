@@ -4,6 +4,7 @@ import Modelo.tbUsuarios;
 import Modelo.EnviarCorreo;
 import Vista.frmVerificarCodRecuperacion;
 import Vista.frmRecuperarContrasena;
+import Controlador.ctrlVerificarCodigo;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
@@ -37,7 +38,7 @@ public class ctrlRecuperacionContrasena implements MouseListener{
             Random random = new Random();
         
             // Genera un número aleatorio de 8 dígitos 
-            codigo = 10000000 + random.nextInt(90000000);
+            codigo = 100000 + random.nextInt(900000);
             String receptor = VISTA.txtCorreoRecu.getText();
             String asunto = "Código de recuperación";
             int Code = codigo;
@@ -45,6 +46,7 @@ public class ctrlRecuperacionContrasena implements MouseListener{
             EnviarCorreo.enviarCorreo(receptor, asunto, Code);
             JOptionPane.showMessageDialog(null, "Se envió el código de recuperación su correo.");    
             frmVerificarCodRecuperacion frm = new frmVerificarCodRecuperacion();
+            ctrlVerificarCodigo ctrl = new ctrlVerificarCodigo(frm,codigo);
             frm.setVisible(true);
             }
         }

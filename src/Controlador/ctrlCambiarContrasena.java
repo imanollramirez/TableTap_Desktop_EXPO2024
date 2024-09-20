@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import Vista.frmCambiarContrasena;
 import static Vista.frmLogin.initFrmLogin;
+import javax.swing.JOptionPane;
 
 public class ctrlCambiarContrasena implements MouseListener{
     
@@ -14,12 +15,47 @@ public class ctrlCambiarContrasena implements MouseListener{
     {
         this.VISTA = vista;
         this.MODELO = modelo;
+        
+        vista.btnRestablecer.addMouseListener(this);
     }
     
     @Override
     public void mouseClicked(MouseEvent e) {
-        initFrmLogin();
-        VISTA.dispose();
+        if(e.getSource() == VISTA.btnRestablecer)
+        {
+                MODELO.setNombreUsuario(VISTA.txtUsuario.getText());
+                MODELO.setContrasenaUsuario(MODELO.ContrasenaEncriptada(VISTA.txtNuevaContra.getText()));
+            
+            if(VISTA.txtUsuario.getText().isEmpty() || VISTA.txtNuevaContra.getText().isEmpty() || VISTA.txtConfirmarNuevaContra.getText().isEmpty())
+            {
+                JOptionPane.showMessageDialog(null, "Complete los campos.");
+            }
+            else if(!VISTA.txtConfirmarNuevaContra.getText().equals(VISTA.txtNuevaContra.getText()))
+            {
+                JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden.");
+            }
+            else
+            {                
+                if(MODELO.existeUsuario() == false)
+                {
+                    JOptionPane.showMessageDialog(null, "Usuario no encontrado, verifique su nombre de usuario.");
+                }
+                else
+                {
+                 if(MODELO.RevisarContra() == true)
+                {
+                    JOptionPane.showMessageDialog(null, "Su contraseña debe ser diferente a la antigua.");
+                }
+                else
+                {
+                    MODELO.CambiarContrasena();
+                    JOptionPane.showMessageDialog(null, "Se restableció su contraseña correctamente.");
+                    initFrmLogin();
+                    VISTA.dispose();
+                }   
+                }
+            }
+        }
     }
 
     @Override

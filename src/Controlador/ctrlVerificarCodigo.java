@@ -2,9 +2,12 @@
 package Controlador;
 
 import Vista.frmCambiarContrasena;
+import Controlador.ctrlCambiarContrasena;
+import Modelo.tbUsuarios;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import Vista.frmVerificarCodRecuperacion;
+import javax.swing.JOptionPane;
 
 public class ctrlVerificarCodigo implements MouseListener {
 
@@ -26,11 +29,14 @@ public class ctrlVerificarCodigo implements MouseListener {
          if(Integer.parseInt(VISTA.txtCodigo.getText()) == CODIGO)
          {
              frmCambiarContrasena frm = new frmCambiarContrasena();
+             tbUsuarios usu = new tbUsuarios();
+             ctrlCambiarContrasena ctrl = new ctrlCambiarContrasena(frm,usu);
              frm.setVisible(true);
+             VISTA.dispose();
          }
          else
          {
-             
+             JOptionPane.showMessageDialog(null, "El código es incorrecto.");
          }
      }
     }

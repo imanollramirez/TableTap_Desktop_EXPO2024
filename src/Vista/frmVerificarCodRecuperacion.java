@@ -25,8 +25,10 @@ public class frmVerificarCodRecuperacion extends javax.swing.JFrame {
             poppins = poppins.deriveFont(16f); 
             
             Font pop = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Bold.ttf"));
+            pop = pop.deriveFont(18f);
             
             txtCodigo.setFont(poppins);
+            btnVerificarCod.setFont(pop);
             
             
         } catch (FontFormatException | IOException e) {
@@ -50,6 +52,7 @@ public class frmVerificarCodRecuperacion extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Verficar código de recuperación");
         setResizable(false);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(500, 620));
@@ -59,6 +62,7 @@ public class frmVerificarCodRecuperacion extends javax.swing.JFrame {
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnVerificarCod.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        btnVerificarCod.setForeground(new java.awt.Color(255, 255, 255));
         btnVerificarCod.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnVerificarCod.setText("Verificar");
         panel.add(btnVerificarCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 457, 130, 48));

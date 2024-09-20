@@ -150,8 +150,9 @@ public class tbUsuarios {
           Connection conexion = claseConexion.getCon();          
                     
           PreparedStatement existe = conexion.prepareStatement("SELECT * FROM Usuario WHERE NombreUsuario = ?");
-          existe.setString(1, getContrasenaUsuario());
+          existe.setString(1, getNombreUsuario());
           ResultSet rs = existe.executeQuery();
+          
           if(rs.next())
           {
               return true;
@@ -174,17 +175,17 @@ public class tbUsuarios {
           Connection conexion = claseConexion.getCon();          
                     
           PreparedStatement existe = conexion.prepareStatement("SELECT ContrasenaUsuario FROM Usuario WHERE NombreUsuario = ?");
-          existe.setString(1, getContrasenaUsuario());
+          existe.setString(1, getNombreUsuario());
           ResultSet rs = existe.executeQuery();
           if(rs.next())
-          {
-              if(rs.getString("ContrasenaUsuario") == getContrasenaUsuario())
+          {             
+              if(rs.getString("ContrasenaUsuario").equals(this.getContrasenaUsuario()))
               {    
               return true;
               }
               else
               {
-                  return false;
+              return false;
               }
           }
           else
