@@ -48,16 +48,16 @@ public class MainLoad extends javax.swing.JFrame {
                         .addGap(131, 131, 131)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(221, 221, 221)
+                        .addGap(289, 289, 289)
                         .addComponent(jLabel3)))
-                .addContainerGap(641, Short.MAX_VALUE))
+                .addContainerGap(573, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(187, 187, 187)
+                .addContainerGap(221, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
+                .addGap(159, 159, 159)
                 .addComponent(jLabel1)
                 .addGap(82, 82, 82))
         );

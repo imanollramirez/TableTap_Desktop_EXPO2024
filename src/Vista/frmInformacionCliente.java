@@ -63,22 +63,18 @@ public class frmInformacionCliente extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNombreCliente.setForeground(new java.awt.Color(0, 0, 0));
         txtNombreCliente.setToolTipText("Nombre del cliente");
         txtNombreCliente.setBorder(null);
         jPanel1.add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 202, 210, 30));
 
-        txtApellidosCliente.setForeground(new java.awt.Color(0, 0, 0));
         txtApellidosCliente.setToolTipText("Apellidos del cliente");
         txtApellidosCliente.setBorder(null);
         jPanel1.add(txtApellidosCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 279, 210, 30));
 
-        txtCorreoCliente.setForeground(new java.awt.Color(0, 0, 0));
         txtCorreoCliente.setToolTipText("Correo eletrónico del cliente");
         txtCorreoCliente.setBorder(null);
         jPanel1.add(txtCorreoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 350, 210, 30));
 
-        txtDUIcliente.setForeground(new java.awt.Color(0, 0, 0));
         txtDUIcliente.setToolTipText("DUI del cliente");
         txtDUIcliente.setBorder(null);
         jPanel1.add(txtDUIcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 420, 210, 30));
@@ -88,7 +84,6 @@ public class frmInformacionCliente extends javax.swing.JFrame {
         jPanel1.add(cbMesero, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 484, 110, 30));
 
         btnListo.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        btnListo.setForeground(new java.awt.Color(0, 0, 0));
         btnListo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnListo.setText("   Listo");
         btnListo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
