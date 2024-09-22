@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import oracle.net.aso.m;
+import Vista.frmBienvenida;
+import javax.swing.SwingWorker;
 /**
  *
  * @author erika
@@ -14,8 +17,38 @@ public class Loading extends javax.swing.JFrame {
      * Creates new form Loading
      */
     public Loading() {
-        initComponents();
-    }
+    initComponents();
+    frmBienvenida Main = new frmBienvenida();
+    Main.setVisible(false);  // Corrección: Se debe usar 'this' o un componente adecuado
+    
+    // Creación del SwingWorker para manejar el progreso
+    new SwingWorker<Void, Integer>() {
+        @Override
+        protected Void doInBackground() throws Exception {
+            for (int x = 0; x <= 100; x++) {  // Corrección en el ciclo for
+                Thread.sleep(110);  // Simula una tarea en segundo plano
+                publish(x);  // Publica el progreso
+            }
+            return null;
+        }
+
+        @Override
+        protected void process(java.util.List<Integer> chunks) {
+            int progress = chunks.get(chunks.size() - 1);
+            jLabel1.setText(progress + "%");  // Asumiendo que jLabel1 es la barra de progreso
+            jProgressBar1.setValue(progress);
+        }
+
+        @Override
+        protected void done() {
+            Loading.this.dispose();
+            
+            //Cree una nueva instancia de frmBienvenida y la muestra visible
+            frmBienvenida Main = new frmBienvenida();
+            Main.setVisible(true);
+        }
+    }.execute();
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +64,18 @@ public class Loading extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jProgressBar1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+                jProgressBar1AncestorMoved(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 781, 20));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 23)); // NOI18N
@@ -43,7 +87,12 @@ public class Loading extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 780, 450));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jProgressBar1AncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jProgressBar1AncestorMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jProgressBar1AncestorMoved
 
     /**
      * @param args the command line arguments
