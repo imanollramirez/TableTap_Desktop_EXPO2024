@@ -9,6 +9,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
+/*
+Este controlador es el que valída las credenciales.
+- Si las credenciales son incorrectas, pues le indicará.
+- Si las credenciales son correctas pero el Rol del usuario no es "Recepcionsita", le dirá que no puede ingresar porque no está otorgado el permiso.
+- También podemos acceder desde acá el Login a Recuperación de Contraseña*/
+
 public class ctrlLogin implements MouseListener{
 
     frmLogin VISTA;

@@ -10,6 +10,14 @@ import Vista.frmMenu;
 import java.util.UUID;
 import javax.swing.JOptionPane;
 
+/*
+Este controlador pide la información del cliente que se va a registrar, también las tablad de Clietnes y Mesas,
+ya que en ambas se harán el INSERT, porque el cliente posee una mesa.
+
+Se le asigna una mesa, y tambien un mesero.
+*/
+
+
 public class ctrlInformacionCliente implements MouseListener{
 
     frmInformacionCliente VISTA;

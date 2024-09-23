@@ -10,6 +10,17 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/*
+Esta es la clase donde se escribe la info con la que se envían los correos de recu
+para los usuarios.
+
+Aparte se agregan las librerias que son necesarias, las cuales son:
+- Action- 1.1.1.jar
+- javax.mail.jar
+
+que están en la carpeta de Librerías.
+*/
+
 public class EnviarCorreo {
     
     public static void enviarCorreo(String recipient, String subject, int codigo) {

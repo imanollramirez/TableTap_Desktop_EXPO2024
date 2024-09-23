@@ -7,6 +7,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
+/* Este controlador contiene la tabla de los clintes registrados en la base, se pude eliminar y actuliazar (Insertar no porque esa función
+es de otro form.
+- Bueno, es lo mismo que el de android, si el cliente tiene un pedido y no ha finalzado, no se puede eliminar; de lo contrario si.
+- Se actualiza normal como lo de siempre, los campos y solamente se cambia la información*/
+
 public class ctrlClientesRegistrados implements MouseListener{
 
     private tbClientes CLIENTES;

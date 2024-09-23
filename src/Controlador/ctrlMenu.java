@@ -19,6 +19,12 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+/*
+Este controlador es del menu principal, básicamente solo carga los paneles y les manda los datos necesarios.
+Crea objetos de las tabla que el panel requiere y también el panel; Es decir, crea objetos o instancias de cada uno para 
+poder ser mostradas pues.
+*/
+
 public class ctrlMenu implements MouseListener{
 
     private frmMenu VISTA;

@@ -10,6 +10,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 
+/*
+Este controlador muestra un croquis de las mesas disponibles en el restaurante (fictioso por el momento), y 
+al darle clic a una mesa, nos manda para el formulario que nos pode la información del cliente.
+*/
+
 public class ctrlReservacionMesas implements MouseListener {
 
     tbMesas MODELO;

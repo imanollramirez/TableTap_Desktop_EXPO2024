@@ -16,6 +16,8 @@ public class frmBienvenida extends javax.swing.JFrame {
         
         //Investigación: Investigué como asignar fuentes personalizadas, y simplemente se descarga el paquete de la fuete, y 
         //con este código se puede asignar al elemento que queremos.
+        
+        //Este código que investigó Imanol, es para asignarle una fuente personalizada a los elementos que están en el FORM.
         try {
             Font poppinsFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Bold.ttf"));
             poppinsFont = poppinsFont.deriveFont(20f); 

@@ -1,4 +1,3 @@
-
 package Controlador;
 
 import Vista.frmCambiarContrasena;
@@ -8,6 +7,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import Vista.frmVerificarCodRecuperacion;
 import javax.swing.JOptionPane;
+
+/*
+Este controlador lo que hace es que verifica el COD de Recu,
+Si es correcto, pues le da paso para que pueda restablecer su contraseña; 
+si no, le indica que es incorrecto (como lo usual).
+*/
 
 public class ctrlVerificarCodigo implements MouseListener {
 

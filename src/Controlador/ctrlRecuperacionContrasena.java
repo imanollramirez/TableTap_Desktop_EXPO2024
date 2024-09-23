@@ -10,6 +10,11 @@ import java.awt.event.MouseListener;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
+/*
+Este controlador, pide al usuario ingresar su correo eletrónico, para enviar el COD
+de recu y asi poder seguir con el proceso común de Recu de Contra.
+*/
+
 public class ctrlRecuperacionContrasena implements MouseListener{
 
     public int codigo;
