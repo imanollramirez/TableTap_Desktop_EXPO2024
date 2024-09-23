@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.ImageIcon;
 
 public class frmBienvenida extends javax.swing.JFrame {
 
@@ -14,11 +15,17 @@ public class frmBienvenida extends javax.swing.JFrame {
     public frmBienvenida() {
         initComponents();       
         
+        /*Este código lo que haces que les asigna el logo a la aplicación.
+        Lo hace de la siguiente manera, obtiene el recurso, osea la IMG, y luego se la asigna al form, acá mismo
+        ya que estamos en el mismo formulario.*/
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/TableTap_Logo_Transparente.png")).getImage());
+        
         //Investigación: Investigué como asignar fuentes personalizadas, y simplemente se descarga el paquete de la fuete, y 
         //con este código se puede asignar al elemento que queremos.
         
         //Este código que investigó Imanol, es para asignarle una fuente personalizada a los elementos que están en el FORM.
         try {
+            
             Font poppinsFont = Font.createFont(Font.TRUETYPE_FONT, new File("src/Fonts/Poppins/Poppins-Bold.ttf"));
             poppinsFont = poppinsFont.deriveFont(20f); 
             btnIniciar.setFont(poppinsFont);

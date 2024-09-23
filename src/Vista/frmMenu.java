@@ -3,6 +3,7 @@ package Vista;
 import Controlador.ctrlMenu;
 import Modelo.tbEmpleados;
 import static Vista.frmLogin.initFrmLogin;
+import javax.swing.ImageIcon;
 
 public class frmMenu extends javax.swing.JFrame {
 
@@ -11,6 +12,12 @@ public class frmMenu extends javax.swing.JFrame {
      */
     public frmMenu() {
         initComponents();
+        
+        /*Este código lo que haces que les asigna el logo a la aplicación.
+        Lo hace de la siguiente manera, obtiene el recurso, osea la IMG, y luego se la asigna al form, acá mismo
+        ya que estamos en el mismo formulario.*/
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/TableTap_Logo_Transparente.png")).getImage());
+        
         btnMenuInicio.enable(false);
         pnlMainContainer.setVisible(false);
     }
