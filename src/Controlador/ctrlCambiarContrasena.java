@@ -7,6 +7,16 @@ import Vista.frmCambiarContrasena;
 import static Vista.frmLogin.initFrmLogin;
 import javax.swing.JOptionPane;
 
+/*Este controlador, cumple con la función de actualizar la contraseña del usuario.
+Pidiendole su nombre de usuario y contraseña, y antes de que se actualice, verifica si el uusario existe, y también si
+la contraseña es la misma que la antigua, por motivos de seguridad debe de ser distinta.
+
+-Se utiliza:
+-  formulario de recuperación.
+-  Controlador del mismo
+-  tbUsuarios, que es donde están almacenados los usuarios en la base de datos.
+*/
+
 public class ctrlCambiarContrasena implements MouseListener{
     
     private frmCambiarContrasena VISTA;
