@@ -6,7 +6,6 @@ import Vista.frmInformacionCliente;
 import Modelo.tbClientes;
 import Modelo.tbMesas;
 import Modelo.tbEmpleados;
-import Vista.frmMenu;
 import java.util.UUID;
 import javax.swing.JOptionPane;
 
@@ -24,6 +23,8 @@ public class ctrlInformacionCliente implements MouseListener{
     tbClientes CLIENTES;
     tbMesas MESAS;
     tbEmpleados EMPLEADOS;
+    public String idEmpleado = "";
+    
     
     public ctrlInformacionCliente(frmInformacionCliente vista,tbClientes clientes, tbMesas mesas, tbEmpleados empleados, int NumMesa)
     {
@@ -36,14 +37,21 @@ public class ctrlInformacionCliente implements MouseListener{
         empleados.CargarMeseros(vista.cbMesero);
         mesas.setIdMesa(NumMesa);
         
+        //Investigation: This code, gets the first Employee found in the Combo Box, avoiding any mistakes by not touching it.
+        //I mean, if the User do not change it, cuz the ID would be empty.
+        tbEmpleados selectedItem = (tbEmpleados) vista.cbMesero.getSelectedItem();
+        if (selectedItem != null) {
+        idEmpleado = selectedItem.getIdEmpleado();
+        mesas.setIdEmpleado(idEmpleado); 
+}
+        //This code change the employee and gets the ID, to send it to the BD, Teacher Bryan taught it to us.
         vista.cbMesero.addActionListener(e -> 
          {
              if(e.getSource() == vista.cbMesero)
                 {
-                tbEmpleados selectedItem = (tbEmpleados) vista.cbMesero.getSelectedItem();
                 if(selectedItem != null)
                 {
-                    String idEmpleado = selectedItem.getIdEmpleado();
+                    idEmpleado = selectedItem.getIdEmpleado();
                     mesas.setIdEmpleado(idEmpleado);
                 }
                 }
@@ -95,7 +103,8 @@ public class ctrlInformacionCliente implements MouseListener{
          MESAS.setIdMesa(MESAS.getIdMesa());
          MESAS.setEstadoMesa("Ocupada");
          MESAS.setIdCliente(idCliente);
-            
+         MESAS.setIdEmpleado(idEmpleado);
+               
 
          if(CLIENTES.ExisteDUI() == true)
          {

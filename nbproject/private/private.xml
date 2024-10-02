@@ -2,20 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Vista/frmBienvenida.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Vista/frmLogin.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Controlador/ctrlLogin.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Controlador/ctrlInformacionCliente.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Vista/frmInformacionCliente.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Modelo/claseConexion.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Modelo/EnviarCorreo.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Modelo/tbEmpleados.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Vista/Load.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Vista/Loading.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Controlador/ctrlVerificarCodigo.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Controlador/ctrlReservacionMesas.java</file>
-            <file>file:/C:/Users/erika/OneDrive/Escritorio/TableTap_Desktop_EXPO2024/src/Controlador/ctrlRecuperacionContrasena.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
