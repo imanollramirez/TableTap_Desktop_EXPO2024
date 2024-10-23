@@ -4,7 +4,7 @@ import java.sql.*;
 
 
 public class claseConexion {
-    private static final String URL = "jdbc:oracle:thin:@192.168.1.10:1521:xe";
+    private static final String URL = "jdbc:oracle:thin:@192.168.167.151:1521:xe";
     private static final String USUARIO = "system";
     private static final String CONTRASENA = "godislove";
 

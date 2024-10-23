@@ -60,8 +60,8 @@ public class ctrlCambiarContrasena implements MouseListener{
                 {
                     MODELO.CambiarContrasena();
                     JOptionPane.showMessageDialog(null, "Se restableció su contraseña correctamente.");
-                    initFrmLogin();
                     VISTA.dispose();
+                    initFrmLogin();
                 }   
                 }
             }
